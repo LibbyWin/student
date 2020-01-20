@@ -15,13 +15,17 @@ student budget. All students can access this site at the university library, mea
 ## Features
 how many pages does the site have? run through each page bit by bit
 
-## Overview Of Fatabase
+## Overview Of Database
 ## Technologies Used
 - Heroku - What is it?
 - mongoDB -What? WHY?
 - python
 - HTML
 - CSS
+- google fonts  
+- bootstrap
+- font awesome
+- Flask
 
 
 ## Wireframes
