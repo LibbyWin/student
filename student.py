@@ -13,7 +13,7 @@ def add_recipes():
     return render_template("add_recipes.html")
 
 
-if __name__ == "__main__":
-        app.run(host=os.environ.get("IP"),
-        port=os.environ.get("PORT"),
-        debug=True)
+if __name__ == '__main__':
+    app.run(host=os.getenv("IP", "0.0.0.0"),
+    port=int(os.getenv("PORT", 8080)),debug=
+    False)

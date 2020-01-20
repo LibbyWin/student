@@ -13,3 +13,20 @@ body {
     padding: 0;
 }
 
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    color: #1DE9C3;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
