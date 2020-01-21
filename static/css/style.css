@@ -29,7 +29,8 @@ h1 {
 
 #logo {
     float: left;
-    font-size: 280%;
+    font-size: 320%;
+   
 }
 
 #menu {
@@ -41,6 +42,7 @@ h1 {
 #menu li{
     float: right;
     margin-right: 30px;
+
 }
 
 #menu a{
@@ -58,8 +60,10 @@ h1 {
 
 }
 
-/*-----------Hero Image-------------*/
 
+
+/*-----------Hero Image-------------*/
+/*
 .main-page {
     height: 900px;
     width: 100%;
@@ -89,12 +93,30 @@ h1 {
     letter-spacing: 2px;
     position: absolute;
 }
+*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding-top: 90px;
+}
 
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
 }
 
 /*-----------footer-------------*/

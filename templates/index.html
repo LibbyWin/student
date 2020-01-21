@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>  </h2>
-<br>
+<h1 style="
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #1d2124;"
+    > {{selected_category}}</h1>
 
+<br>
 
 {% for recipe in recipes %}
 <div class="row">
