@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
+mongo = PyMongo(app)
 
 @app.route('/')
 def index():
@@ -14,6 +15,7 @@ def index():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html", page_title="Add Recipe")
+    
 
 
 if __name__ == "__main__":

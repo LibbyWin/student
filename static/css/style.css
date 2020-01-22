@@ -179,6 +179,12 @@ input[type=submit]:hover {
 }
 
 
+/*-----------View Recipe-------------*/
+
+.image-detail {
+    max-width: 50%;
+}
+
 /*-----------footer-------------*/
 
 footer {

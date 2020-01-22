@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div id="detail-container" class="container">
+	<div class="row col-md-12 mb-5">
+		<div class="recipe-card">
+			<div class="row">
+				<div class="col-md-6 bg-img">
+					{% recipe.image %}
+                        <img src="{{recipe.image}}" class="img-fluid  image-detail"/>
+                 </div>
+					<div class="col-md-6 text-center recipe-info">
+						<p class="card-text"><strong>Category:</strong> {{recipe.category}}</p>
+						<p class="card-text"><strong>Price</strong>£{{recipe.price}} </p>
+						<p class="card-text"><strong>Serves:</strong> {{recipe.serves}}</p>
+					</div>
+                    </div>
+				</div>
 
 
 {% endblock %}
