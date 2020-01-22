@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<form>
-  <div class="form-row">
+<h2>{{ page_title }}</h2>
+
+    <section class="add_recipe">
+    <div class="container">
+        <div class="addrecipe">
+            <div class="row" id="add_recipe">
+                <h2 class="addyourrecipe">Add Your Recipe Here</h2>
+            </div>
+            <form>
+                <div class="form-row">
     <div class="form-group col-md-6">
       <label for="recipetitle">Recipe Title</label>
       <input type="text" class="form-control" id="recipetitle" input name="recipetitle">
@@ -17,7 +25,7 @@
     </div>
         <div class="form-group col-md-6">
       <label for="protein">Protein</label>
-      <input type="text" class="form-control" id="protein" input name="protein">
+      <input type="text" class="form-control" id="protein" input name="protein" min="1" max="20">
     </div>
   </div>
   <div class="form-group">
@@ -48,13 +56,14 @@
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-
+            </form>
+        </div>
+    </div>
+    </section>
 
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+//Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {

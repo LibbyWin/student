@@ -165,6 +165,48 @@ h1 {
   background-color:grey ;
 }
 
+/*-------------------ADD RECIPE---------------------*/
+
+.addyourrecipe {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: #399dd0;
+  color: white;
+  border-radius: 4px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  position: inherit;
+}
+
+input[type=submit]:hover {
+  background-color: #2784B4;
+}
+
+.addrecipe {
+  background-color: transparent;
+  padding: 20px;
+}
+
 
 /*-----------footer-------------*/
 
