@@ -26,12 +26,9 @@ ADD A LINK TO WHERE THE CATEGORIES GO?????
 {% for recipe in recipes %}
 <div class="row">
 <div class="card">
-{% if recipe.image %}
-    {% if "http" in recipe.image  %}
+{% recipe.image %}
         <img src="{{recipe.image}}" class="img-fluid img-thumbnail recipe-img" alt= "recipe.image"/>
-            {% else %}    
-            	<img src="/static/img/some_recipies/dumbell.jpg" class="img-fluid img-thumbnail recipe-img" alt ="dumbell"/>
-    {% endif %}
+
   <div class="card-body">
     <h5 class="card-title">{{recipe.title}}</h5>
     
@@ -39,7 +36,7 @@ ADD A LINK TO WHERE THE CATEGORIES GO?????
 
 		<p class="card-text"><i class="fas fa-users"></i> {{recipe.serves}}</p>    	
         <p class="card-text"><i class="fab fa-pound-sign"></i> {{recipe.price}}</p>
-		<p class="card-text"><i class="fas fa-drumstick-bite"></i> {{recipe.protien}} g</p>
+		<p class="card-text"><i class="fas fa-drumstick-bite"></i> {{recipe.protein}} g</p>
     </div>
     <p class="card-text">{{recipe.description}}</p>
   </div>
@@ -48,6 +45,7 @@ ADD A LINK TO WHERE THE CATEGORIES GO?????
         onclick="window.location.href='{{ url_for( 'view_recipe', recipe_id=recipe._id)}}';">View Recipe</button>
   </div>
 </div>
-{% endif %}
+
 {% endfor %}
+
 {% endblock %}
