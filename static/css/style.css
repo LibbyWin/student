@@ -140,7 +140,7 @@ h1 {
 .addyourrecipe {
   text-transform: uppercase;
   text-align: center;
-  color: red;
+
   text-decoration: none;
 
 }
@@ -155,7 +155,7 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 6px;
-  color: red;
+
   margin-bottom: 16px;
 }
 

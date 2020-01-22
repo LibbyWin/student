@@ -2,20 +2,43 @@
 {% block content %}
 
 <div id="detail-container" class="container">
-	<div class="row col-md-12 mb-5">
+	<div class="row col-md-12 mb-6">
 		<div class="recipe-card">
 			<div class="row">
 				<div class="col-md-6 bg-img">
 					{% recipe.image %}
                         <img src="{{recipe.image}}" class="img-fluid  image-detail"/>
-                 </div>
+                </div>
 					<div class="col-md-6 text-center recipe-info">
-						<p class="card-text"><strong>Category:</strong> {{recipe.category}}</p>
-						<p class="card-text"><strong>Price</strong>£{{recipe.price}} </p>
-						<p class="card-text"><strong>Serves:</strong> {{recipe.serves}}</p>
+						<p class="card-text"><b>Category:</b> {{recipe.category}}</p>
+						<p class="card-text"><b>Price</b>£{{recipe.price}} </p>  <!--CHECK IF THIS IS COORECT-->
+						<p class="card-text"><b>Serves</b> {{recipe.serves}}</p>
+                        <p class="card-text"><b>Protein</b> {{recipe.protien}}g</p>   <!--CHECK IF THIS IS COORECT-->
 					</div>
-                    </div>
+            </div>
+		</div>
+            <!---        CHECK THIS IS ALL CORRECT BECAUSE IT DOESNT LOOK IT TO ME!!!
+                <div class="card-body">
+					<h2 class="card-title text-center" style="text-align: center">{{recipe.title}}</h2>
+					<p class="card-text"><b>Ingredients: </b>
+                    <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li>
+                        {{ingredient}} 
+                        </li>
+                        {%endfor%}
+                    </ul>
+                    </p>
+					<p class="card-text"><b>Instructions:</b> 
+                    <ul>
+                    {% for instruction in recipe.instructions %}
+                    <li>
+                    {{loop.index}}. {{instruction}} 
+                    </li>
+                    {%endfor%}
+                    </ul>
+                    </p>
 				</div>
-
-
+	</div>
+</div>-->
 {% endblock %}
