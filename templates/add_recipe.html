@@ -9,41 +9,41 @@
             <form>
                 <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="recipetitle">Recipe Title</label>
-      <input type="text" class="form-control" id="recipetitle" input name="recipetitle" placeholder="Recipe Name">
+
+      <input type="text" class="form-control" id="recipetitle" input name="recipetitle" placeholder="Recipe Name" required>
     </div>
     <div class="form-group col-md-6">
-      <label for="price">Price</label>
-      <input type="number" class="form-control" id="price" input name="price" min="0.00" max="50.00" placeholder="Price">
+  
+      <input type="number" class="form-control" id="price" input name="price" min="0.00" max="50.00" placeholder="Price" required>
     </div>
         <div class="serves col-md-6">
-      <label for="serves">Serves</label>
-      <input type="number" class="form-control" id="serves" input name="serves" min="1" max="20" placeholder="Serves">
+
+      <input type="number" class="form-control" id="serves" input name="serves" min="1" max="20" placeholder="Serves" required>
     </div>
         <div class="form-group col-md-6">
-      <label for="protein">Protein</label>
-      <input type="text" class="form-control" id="protein" input name="protein" min="1" max="100" placeholder="Protein">
+
+      <input type="text" class="form-control" id="protein" input name="protein" min="1" max="100" placeholder="Protein" required>
     </div>
   </div>
   <div class="form-group">
-    <label for="ingredience">Ingredience</label>
-    <input type="text" class="form-control" id="ingredience" placeholder="Ingredience" input name="ingredience">
+
+    <input type="text" class="form-control" id="ingredience" placeholder="Ingredience" input name="ingredience" required>
   </div>
   <div class="form-group">
-    <label for="instructions">Instructions</label>
-    <input type="text" class="form-control" id="instructions" placeholder="Instructions" input name="instructions">
+
+    <input type="text" class="form-control" id="instructions" placeholder="Instructions" input name="instructions" required>
   </div>
   <div class="form-group">
-    <label for="Description">Description</label>
-    <input type="text" class="form-control" id="description" placeholder="Describe Your Meal" input name="description">
+
+    <input type="text" class="form-control" id="description" placeholder="Describe Your Meal" input name="description" required>
   </div>
   <div class="form-group">
-    <label for="Description">URL</label>
+
     <input type="text" class="form-control" id="description" placeholder="Add the web address here eg https://example.com" input name="description" pattern="https://.*" size="30" required>
   </div>
-  <div class="form-row">
+  <div class="form-row" required>
     <div class="form-group col-md-4">
-      <label for="inputState">Meal Category</label>
+      <label for="inputState"><strong>Meal Category</strong></label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
         <option>Breakfast</option>
@@ -59,24 +59,5 @@
     </section>
 
 
-<script>
-//Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
+
 {% endblock %}
