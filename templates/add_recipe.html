@@ -6,7 +6,7 @@
     <section class="add_recipe">
     <div class="container">
         <div class="addrecipe">
-            <form action="" method="POST">
+            <form action="{{ url_for('insert_recipe') }}" method="POST">
                 <div class="form-row">
     <div class="form-group col-md-6"  >
 
@@ -52,7 +52,7 @@
       </select>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" name="action">Submit</button>
             </form>
         </div>
     </div>

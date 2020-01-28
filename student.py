@@ -12,8 +12,11 @@ app.config["MONGO_URI"] = 'mongodb+srv://LWin_01:01Libby@StudentLife-ldsrb.mongo
 mongo = PyMongo(app)
 
 @app.route('/')
+@app.route('/index')
 def index():
-    return render_template("index.html", recipes=mongo.db.recipes.find())
+    return render_template("index.html", 
+    recipes=mongo.db.recipes.find())
+
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -21,10 +24,10 @@ def add_recipe():
     recipes=mongo.db.recipes.find())
 
 @app.route('/insert_recipe', methods=['POST'])
-def insert_task():
-    recipes = mongo.db.resipes
+def insert_recipe():
+    recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('index'))
 
 
 if __name__ == "__main__":
