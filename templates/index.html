@@ -22,7 +22,12 @@
 
 <br>
 
+
+sdlfhskdjfhsdkjfh
 {% for recipe in recipes %}
+sdlfhskdjfhsdkjfh
+{{ recipe }}
+
 <div class="row">
 <div class="card">
 {{recipe.image}}
@@ -40,8 +45,7 @@
     <p class="card-text">{{recipe.description}}</p>
   </div>
   <div class="card-body">
-        <button type="button" class="btn btn-primary btn-lg btn-block"
-        onclick="window.location.href='{{ url_for( 'view_recipe', recipe_id=recipe._id)}}';">View Recipe</button>
+        
   </div>
 </div>
 
