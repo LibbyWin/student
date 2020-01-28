@@ -42,6 +42,8 @@ test your files online - w3c html validator
 vocab and spell check!
 use 'am i responsive' web tool
 did anything fail? why did it fail?
+Due to an error with mongodb i originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
+This ensured me that i was creating the correct code even though I couldnt see it on my preview when using GitPod.
 ## Code Validation
 use W3C validator for HTML
 use W3C validator for CSS

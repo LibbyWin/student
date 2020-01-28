@@ -5,6 +5,10 @@
 
 /* ------------------- Nav bar -----------------*/
 
+
+
+
+
 * {
 margin: 0;
 padding: 0;
@@ -135,7 +139,20 @@ h1 {
   background-color:grey ;
 }
 
+
+
+
+/* ------------------- Cards (body and image) -----------------*/
+
+.card-body{
+    color: black;
+}
+
+
+
 /*-------------------ADD RECIPE---------------------*/
+
+
 
 .addyourrecipe {
   text-transform: uppercase;

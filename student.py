@@ -20,7 +20,11 @@ def add_recipe():
     return render_template("add_recipe.html", page_title="Add Recipe",
     recipes=mongo.db.recipes.find())
 
-    
+@app.route('/insert_recipe', methods=['POST'])
+def insert_task():
+    recipes = mongo.db.resipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
 
 
 if __name__ == "__main__":
