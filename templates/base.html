@@ -1,7 +1,8 @@
 <html lang="en">
  <head> 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <!----------------------- google font ----------------------->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
  <!----------------------- materialize ---------------------
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
- <!----------------------- font awesome ----------------------->
+ <!--------------------- font awesome ----------------------->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
  <!----------------------- My Style sheet ----------------------->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
@@ -27,11 +28,10 @@
             </a>
             <nav>
                 <ul id="menu">
-                    <li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a> </li>
-                    <li><a href="{{ url_for('index') }}">All Recipes</a> </li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a></li>
+                    <li><a href="{{ url_for('index') }}">All Recipes</a></li>
                  </ul>
             </nav>
-
         </div>
     </header>
 
@@ -39,7 +39,7 @@
 
 <div class="container">
     <img src="../static/images/burger.jpg" alt="burger" style="width:100%">
-        <div class="centered col-md-6">We're here to help you find easy, low cost student friendly meals. Without losing the taste.
+        <div class="centered col-sm">We're here to help you find easy, low cost student friendly meals. Without losing the taste.
         <br>
         Looking for something new or add your own student meals!
         </div>

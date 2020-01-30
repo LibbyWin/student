@@ -46,8 +46,8 @@
       <label for="inputState"></label>
       <select id="inputState" class="form-control" name="category">
         <option value="" disabled selected>Meal Category</option>
-                  {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                  {% for category in recipes %}
+                      <option value="{{recipes.category_name}}">{{recipes.category_name}}</option>
                   {% endfor %}
       </select>
     </div>

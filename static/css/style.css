@@ -5,10 +5,6 @@
 
 /* ------------------- Nav bar -----------------*/
 
-
-
-
-
 * {
 margin: 0;
 padding: 0;
@@ -148,8 +144,10 @@ h1 {
     color: black;
 }
 
-
-
+.card {
+    background-color: #c5c5c5;
+    border: 2px solid;
+}
 /*-------------------ADD RECIPE---------------------*/
 
 
