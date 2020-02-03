@@ -21,13 +21,13 @@ Future features which I will implement when I have more time will be ...
 4. Create a commenting section allowing for users to suggest improvements/feedback on recipes. 
 
 ## User Stories
+
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
 loan eating out and buy the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when not on sale!)
 Whenever I was in the library, and needed a break i'd go to the shops to get some food ... so why not help other students make healthy student meals on a 
 student budget. All students can access this site at the university library, meaning thatonly students can access and delete the database.
 
 ## Features
-how many pages does the site have? run through each page bit by bit
 
 - The site contains multiple pages 
 ⋅⋅⋅ Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
@@ -47,6 +47,7 @@ Instructions - How do you make the recipe? (in a step by step guide.)
 Description - How would you describe the recipe?
 
 ## Technologies Used
+
 - Heroku - I used Heroku to deploy my site as it allows for me to use python within my project.
 - mongoDB - Using this document based database, it allowed for me to add in large amounts of data (recipes) which can be easily stored within the cloud.
 - Python - The use of Python within this project allowed for back end programming language for this app.
@@ -59,16 +60,20 @@ Description - How would you describe the recipe?
 
 
 ## Wireframes
+
 these can be seen in their own folder located in......... here is a link ()
 
 ## Version control
+
 - Git - Throughout the entire project, I have commited to using git as version controll in order to save and edit changes within my files and site.
 - Git Hub - Allowed me to push my git commits to a remote repository.
 
 ## Hosting
+
 - This project has been hosting on Heroku. This is due to Heroku allowing for python to be uesd within the project.
 
 ## Testing
+
 what web applications did you test them on
 what mobile sizes did you test ? any issues?
 test your files online - w3c html validator
@@ -76,8 +81,31 @@ vocab and spell check!
 use 'am i responsive' web tool
 did anything fail? why did it fail?
 
-Due to an error with mongodb I originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
-This ensured me that I was creating the correct code even though I couldnt see it on my preview when using GitPod.
+1. When connecting my site to Heroku, there was an unknown error which meant that the site couldnt be previewed. After a few hours of testing and 
+trying to figure out the problem I repushed my work to github, made Heroku the master branch again after disconnecting it. After reloading all my data 
+and pushed all my code to github I found that the error occured due to my Procfile containing no information. After recreating my Procfile and pushing it 
+to github and Heroku, this fixed the error and allowed me to preview my file on Heroku.
+
+2. While importing my code within jinja, I canme across multiple issues with {{_______}}. My issues came from not opening and closing my jinja correctly 
+and due to not understanding that when redirecting to a view to display information a certain singular database iten needs to pass in some way of itentifying 
+that item. This was through giving an ID to the database item. However I went over this multiple times within the course and got extra help to understand where 
+I was going wrong.
+
+3. Due to an error with mongodb, I originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
+This ensured me that I was creating the correct code even though I couldnt see it on my preview when using GitPod. When I had Correctly made my database 
+within mongoDB again I reconnected my site to mongo ensuring that the names and collection names matched up due to mongoDB being case sensitive. This 
+initially created some errors with my site as I was using capital letters instead of lower case.
+
+4. When creating an environment.py fle I mistakenly wrote in error within my code which meant that there wasnt a connection to the rest of the files due 
+to this incorrect syntax. From this I changed the syntax to
+```python 
+os.environ.setdefault
+```
+which effectively connected mt env.py file to the rest of the code.
+
+5. 
+
+
 
 ## Code Validation
 - Throughout this project I ensured that I was making use of W3C validator for both CSS and HTML. This allowed for me to check my code writing and 
@@ -86,6 +114,7 @@ to check there were no errors.
 
 ## Deployment
 where is the live site hosted(heroku)
+
 
 ## Credits
 - All images were sourced from Pixabay.com and Pexels.com
