@@ -5,7 +5,9 @@ add picture here
 The purpose of this site is to allow for all students who visit a universtity library the ability to access Student Life. We are here to show students how they can make 
 delicious meals at a low cost which wont eat into their student loan. 
 ## High Level Requirements
+
 ## Future Features
+
 ## User Stories
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
 loan eating out and buy the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when not on sale!)
@@ -17,15 +19,15 @@ how many pages does the site have? run through each page bit by bit
 
 ## Overview Of Database
 ## Technologies Used
-- Heroku - What is it?
-- mongoDB -What? WHY?
-- python
-- HTML
-- CSS
-- google fonts  
-- bootstrap
-- font awesome
-- Flask
+- Heroku - I used Heroku to deploy my site as it allows for me to use python within my project.
+- mongoDB - Using this document based database, it allowed for me to add in large amounts of data (recipes) which can be easily stored within the cloud.
+- Python - The use of Python within this project allowed for back end programming language for this app.
+- HTML - With the use of HTML it allowed for the initial content to be creates and viewed on this app.
+- CSS - Allows for custom styles to be created and added to my HTML.
+- Google Fonts - Selected Quicksand font to add a sence of style to the writing. 
+- Bootstrap - Creates a creative and responsive grid system, added pre-made styles and allows for jQuery scripts to be added.
+- Font Awesome - Used to add icons within the app.
+- Flask - Added a python micro web framework, which provides libraries, tools and technologies to create a web application.
 
 
 ## Wireframes

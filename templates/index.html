@@ -23,18 +23,19 @@
 <br>
 
 
-sdlfhskdjfhsdkjfh
+
 {% for recipe in recipes %}
-sdlfhskdjfhsdkjfh
+
 {{ recipe }}
 
 <div class="row">
+ <div class="col-sm-6">
 <div class="card">
 {{recipe.image}}
         <img src="{{recipe.image}}" class="img-fluid img-thumbnail recipe-img" alt= "recipe.image"/>
 
-  <div class="card-body">
-    <h5 class="card-title">{{recipe.title}}</h5>
+    <div class="card-body">
+        <h5 class="card-title">{{recipe.title}}</h5>
     
     <div class="small-detail">
 
@@ -43,10 +44,21 @@ sdlfhskdjfhsdkjfh
 		<p class="card-text"><i class="fas fa-drumstick-bite"></i> {{recipe.protein}} g</p>
     </div>
     <p class="card-text">{{recipe.description}}</p>
-  </div>
-  <div class="card-body">
-        
-  </div>
+    </div>
+        <div class="card-body">
+            <div class="card-info">
+                <p class="recipe-description">
+                    {{recipe.description}}
+                </p>
+            </div>
+        <!--<div class="card-footer">
+             <a href="{{ url_for( 'view_recipe') }}" class="btn btn-primary">View Recipe</a>
+        </div>
+            -->
+
+            </div>    
+        </div>
+ </div>
 </div>
 
 {% endfor %}

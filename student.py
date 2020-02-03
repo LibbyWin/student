@@ -29,6 +29,9 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('index'))
 
+#@app.route('/view_recipe')
+#def view_recipe():
+   # what goes here?
 
 if __name__ == "__main__":
         app.run(host=os.environ.get("IP"),

@@ -135,9 +135,6 @@ h1 {
   background-color:grey ;
 }
 
-
-
-
 /* ------------------- Cards (body and image) -----------------*/
 
 .card-body{
@@ -150,14 +147,10 @@ h1 {
 }
 /*-------------------ADD RECIPE---------------------*/
 
-
-
 .addyourrecipe {
   text-transform: uppercase;
   text-align: center;
-
   text-decoration: none;
-
 }
 
 input[type=text],
