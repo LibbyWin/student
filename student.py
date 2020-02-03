@@ -29,9 +29,13 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('index'))
 
-#@app.route('/view_recipe')
-#def view_recipe():
-   # what goes here?
+@app.route('/view_recipe/<recipe_id>')
+def view_recipe():
+   return render_template("view_recipe.html")
+   recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes.id)})
+
+   
+   recipes=mongo.db.recipes
 
 if __name__ == "__main__":
         app.run(host=os.environ.get("IP"),
