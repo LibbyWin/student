@@ -27,20 +27,20 @@ Whenever I was in the library, and needed a break i'd go to the shops to get som
 student budget. All students can access this site at the university library, meaning thatonly students can access and delete the database.
 
 ## Features
-- The site contains multiple pages 
-⋅⋅⋅ Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
-⋅⋅⋅ Add A Recipe - This page contains all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
-⋅⋅⋅ View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
+ The site contains multiple pages 
+- Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
+- Add A Recipe - This page contains all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
+- View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
 
 ## Overview Of MongoDB Database
-Name - The name of the recipe.
-Category - Select which category the recipe goes into ie. Breakfast, Lunch/Dinner or Protein Meal.
-Price - What the recipe costs?
-Protein - How much protein is in the recipe?
-Serves - How many people can this recipe serve?
-Ingredience -  What ingredience do you need to make the recipe?
-Instructions - How do you make the recipe? (in a step by step guide.)
-Description - How would you describe the recipe?
+- Name - The name of the recipe.
+- Category - Select which category the recipe goes into ie. Breakfast, Lunch/Dinner or Protein Meal.
+- Price - What the recipe costs?
+- Protein - How much protein is in the recipe?
+- Serves - How many people can this recipe serve?
+- Ingredience -  What ingredience do you need to make the recipe?
+- Instructions - How do you make the recipe? (in a step by step guide.)
+- Description - How would you describe the recipe?
 
 ## Technologies Used
 - Heroku - I used Heroku to deploy my site as it allows for me to use python within my project.
@@ -56,7 +56,7 @@ Description - How would you describe the recipe?
 
 
 ## Wireframes
-These can be seen in their own folder located in Static/wireframe.  [View wireframes](../static/wireframe)       =========================EDIT========================
+These can be seen in their own folder located in Static/wireframe.  [View wireframes](.../static/wireframe)       =========================EDIT========================
 
 ## Version control
 - Git - Throughout the entire project, I have commited to using git as version controll in order to save and edit changes within my files and site.
@@ -119,9 +119,9 @@ where is the live site hosted(heroku)
 - Thanks to all my university friends who told me about all their weird and cheap student meals, even if some were not included in the website.
 
 ## Acknowledgements
-⋅⋅⋅ Thanks to everyone on the Slack community for helping me with issues that I encountered.
-⋅⋅⋅ Thank you to the Tutors at the Code Institute for their help when i was really struggling.
-⋅⋅⋅ Thanks to Brian Macharia, for the help and support with this project. 
+- Thanks to everyone on the Slack community for helping me with issues that I encountered.
+- Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+- Thanks to Brian Macharia, for the help and support with this project. 
 
 ## Disclaimer
-⋅⋅⋅ This project is for educational use only.
+ This project is for educational use only.
