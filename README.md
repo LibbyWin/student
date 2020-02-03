@@ -4,6 +4,7 @@ add picture here
 ## Purpose
 The purpose of this site is to allow for all students who visit a universtity library the ability to access Student Life. We are here to show students how they can make 
 delicious meals at a low cost which wont eat into their student loan. 
+
 ## High Level Requirements
 
 ## Future Features
@@ -18,6 +19,7 @@ student budget. All students can access this site at the university library, mea
 how many pages does the site have? run through each page bit by bit
 
 ## Overview Of Database
+
 ## Technologies Used
 - Heroku - I used Heroku to deploy my site as it allows for me to use python within my project.
 - mongoDB - Using this document based database, it allowed for me to add in large amounts of data (recipes) which can be easily stored within the cloud.
@@ -32,11 +34,14 @@ how many pages does the site have? run through each page bit by bit
 
 ## Wireframes
 these can be seen in their own folder located in......... here is a link ()
+
 ## Version control
-git
-git hub
+- Git - Throughout the entire project, I have commited to using git as version controll in order to save and edit changes within my files and site.
+- Git Hub - Allowed me to push my git commits to a remote repository.
+
 ## Hosting
-heroku -why did i use heroku
+- This project has been hosting on Heroku. This is due to Heroku allowing for python to be uesd within the project.
+
 ## Testing
 what web applications did you test them on
 what mobile sizes did you test ? any issues?
@@ -44,20 +49,24 @@ test your files online - w3c html validator
 vocab and spell check!
 use 'am i responsive' web tool
 did anything fail? why did it fail?
-Due to an error with mongodb i originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
-This ensured me that i was creating the correct code even though I couldnt see it on my preview when using GitPod.
+Due to an error with mongodb I originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
+This ensured me that I was creating the correct code even though I couldnt see it on my preview when using GitPod.
+
 ## Code Validation
-use W3C validator for HTML
-use W3C validator for CSS
-use pep8 online tool to validate python syntax
+- Throughout this project I ensured that I was making use of W3C validator for both CSS and HTML. This allowed for me to check my code writing and 
+to check there were no errors.
+- To check my python code I used pep8 an online tool to validate my python syntax.
+
 ## Deployment
 where is the live site hosted(heroku)
+
 ## Credits
-All images were from Pixabay.com and Pexels.com
-template
-Thanks to my University friends who told me about all their weird cheap student meals, even if some were not included in the website.
+- All images were sourced from Pixabay.com and Pexels.com
+- Thanks to all my university friends who told me about all their weird and cheap student meals, even if some were not included in the website.
+
 ## Acknowledgements
 Thanks to everyone on the Slack community for helping me with issues that I encountered.
 Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+
 ## Disclaimer
 This project is for educational use only.
