@@ -61,7 +61,7 @@ Description - How would you describe the recipe?
 
 ## Wireframes
 
-These can be seen in their own folder located in Static/wireframe.  [View wireframes](..static/wireframe)      
+These can be seen in their own folder located in Static/wireframe.  [View wireframes](..static/wireframe)       =========================EDIT========================
 
 ## Version control
 
@@ -96,6 +96,10 @@ os.environ.setdefault
 ```
 which effectively connected mt env.py file to the rest of the code.
 
+5. When editing my work and going onto preview there was an issue which meant that my recent edits hadnt been updating within the preview. To fix this, I had to 
+open the chrome developer tool, long click on the reload button, and click on 'Empty cashe and hard reload'. This deleted all the recent cashe and forced a roload 
+allowing for the new edits to be seen within the previews. This happened when using Safari, Chrome and Firefox. 
+
 5. MOBILE APPLICATION DOES IT WORK DOES IT NOT 
 DOES IT WORK ON SAFARI/FIREFOX/CHROME                              =========================EDIT========================
 DID YOU USE THE INSPECT TOOL 
@@ -123,9 +127,9 @@ where is the live site hosted(heroku)
 - Thanks to all my university friends who told me about all their weird and cheap student meals, even if some were not included in the website.
 
 ## Acknowledgements
-⋅⋅⋅Thanks to everyone on the Slack community for helping me with issues that I encountered.
-⋅⋅⋅Thank you to the Tutors at the Code Institute for their help when i was really struggling.
-⋅⋅⋅Thanks to Brian Macharia, for the help and support with this project. 
+⋅⋅⋅ Thanks to everyone on the Slack community for helping me with issues that I encountered.
+⋅⋅⋅ Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+⋅⋅⋅ Thanks to Brian Macharia, for the help and support with this project. 
 
 ## Disclaimer
-⋅⋅⋅This project is for educational use only.
+⋅⋅⋅ This project is for educational use only.
