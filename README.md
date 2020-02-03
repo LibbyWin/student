@@ -1,5 +1,5 @@
 # Student Life
-add picture here
+add picture here                =========================EDIT========================
 
 ## Purpose
 The purpose of this site is to allow for all students who visit a universtity library the ability to access Student Life. We are here to show students how they can make 
@@ -61,7 +61,7 @@ Description - How would you describe the recipe?
 
 ## Wireframes
 
-these can be seen in their own folder located in......... here is a link ()
+these can be seen in their own folder located in......... here is a link ()                 =========================EDIT========================
 
 ## Version control
 
@@ -103,7 +103,9 @@ os.environ.setdefault
 ```
 which effectively connected mt env.py file to the rest of the code.
 
-5. 
+5. MOBILE APPLICATION DOES IT WORK DOES IT NOT 
+DOES IT WORK ON SAFARI/FIREFOX/CHROME                              =========================EDIT========================
+DID YOU USE THE INSPECT TOOL 
 
 
 
@@ -114,15 +116,23 @@ to check there were no errors.
 
 ## Deployment
 where is the live site hosted(heroku)
+                                                 =========================EDIT========================
 
+## When commiting to Github, follow theres steps...
+1. Ensure you are on the /environment/ in your ternimal.
+2. If not, use `cd ..` to got back one file at a time till you reach 'environment'.
+3. Enter `git add .` to add all content to github.
+4. `git commit -m "Initial commit` This code will commit your code and add a a small description.
+5. `git push` will upload this file to a remote repository.
 
 ## Credits
 - All images were sourced from Pixabay.com and Pexels.com
 - Thanks to all my university friends who told me about all their weird and cheap student meals, even if some were not included in the website.
 
 ## Acknowledgements
-Thanks to everyone on the Slack community for helping me with issues that I encountered.
-Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+⋅⋅⋅Thanks to everyone on the Slack community for helping me with issues that I encountered.
+⋅⋅⋅Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+⋅⋅⋅Thanks to Brian Macharia, for the help and support with this project. 
 
 ## Disclaimer
-This project is for educational use only.
+⋅⋅⋅This project is for educational use only.
