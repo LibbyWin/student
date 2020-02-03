@@ -61,7 +61,7 @@ Description - How would you describe the recipe?
 
 ## Wireframes
 
-these can be seen in their own folder located in......... here is a link ()                 =========================EDIT========================
+These can be seen in their own folder located in Static/wireframe.  [View wireframes]   (..static/wireframe)      
 
 ## Version control
 

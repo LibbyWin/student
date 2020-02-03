@@ -3,7 +3,7 @@
 
 
 <div class="dropdown" style="float:right;">
-  <button class="drop-button">Select A Category    <i class="fas fa-angle-down"></i></button>
+  <button class="drop-button">Select A Category<i class="fas fa-angle-down"></i></button>
   <div class="dropdown-content">
   <a href="#">Breakfast</a>
   <a href="#">Lunch/Dinner</a>
@@ -11,26 +11,13 @@
   </div>
 </div>
 
-
-<h1 style="
-    margin-top: 60px;
-    margin-left: 30px;
-    margin-bottom: 60px;
-    text-align: center;
-    color: #777777;"
-    > {{selected_category}}</h1>
-
-<br>
-
-
-
 {% for recipe in recipes %}
 
 {{ recipe }}
 
 <div class="row">
- <div class="col-sm-6">
-<div class="card">
+<div class="col-sm-6">
+<div class="card text-center" style="width: 18rem;">
 {{recipe.image}}
         <img src="{{recipe.image}}" class="img-fluid img-thumbnail recipe-img" alt= "recipe.image"/>
 
