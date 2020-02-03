@@ -61,7 +61,7 @@ Description - How would you describe the recipe?
 
 ## Wireframes
 
-These can be seen in their own folder located in Static/wireframe.  [View wireframes]   (..static/wireframe)      
+These can be seen in their own folder located in Static/wireframe.  [View wireframes](..static/wireframe)      
 
 ## Version control
 
@@ -73,13 +73,6 @@ These can be seen in their own folder located in Static/wireframe.  [View wirefr
 - This project has been hosting on Heroku. This is due to Heroku allowing for python to be uesd within the project.
 
 ## Testing
-
-what web applications did you test them on
-what mobile sizes did you test ? any issues?
-test your files online - w3c html validator
-vocab and spell check!
-use 'am i responsive' web tool
-did anything fail? why did it fail?
 
 1. When connecting my site to Heroku, there was an unknown error which meant that the site couldnt be previewed. After a few hours of testing and 
 trying to figure out the problem I repushed my work to github, made Heroku the master branch again after disconnecting it. After reloading all my data 
