@@ -16,10 +16,9 @@ body {
     color: #777777;
 
 }
-.nav {
-    background-color: black;
+nav .nav-wrapper {
+    background-color: #26a69a;
 }
-
 h1 {
     font-family: Quicksand;
     text-transform: uppercase;
@@ -153,8 +152,8 @@ h2 {
 }
 
 .card {
-    background-color: #c5c5c5;
-    border: 2px solid;
+    background-color: #3e3e3e;
+    border: 2px solid black;
 }
 /*-------------------ADD RECIPE---------------------*/
 
