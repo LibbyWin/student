@@ -92,6 +92,10 @@ which effectively connected mt env.py file to the rest of the code.
 open the chrome developer tool, long click on the reload button, and click on 'Empty cashe and hard reload'. This deleted all the recent cashe and forced a roload 
 allowing for the new edits to be seen within the previews. This happened when using Safari, Chrome and Firefox. 
 
+6. Near the end of testing there was a large error caused by Pymongo. Stating that 'Cannot set option after executing query'. This was due to an error within my Index.html page 
+where I had `{{ url_for('view_recipe', recipes_id=recipes._id)}}` meaning that I was trying to select multiple recipes when trying to locate one specific recipe.
+Due to this error, extra care was taken to ensure that my spelling and use of 's' were added only when neccessary.
+
 5. MOBILE APPLICATION DOES IT WORK DOES IT NOT 
 DOES IT WORK ON SAFARI/FIREFOX/CHROME                              =========================EDIT========================
 DID YOU USE THE INSPECT TOOL 
