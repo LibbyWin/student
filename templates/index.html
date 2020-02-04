@@ -11,12 +11,36 @@
   </div>
 </div>
 
+<div class="dropdown row">
+    <div class="col-md-6">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose Category
+        </a>
+
+        <ul class="dropdownMenu">
+            <li>
+                <a href=   ></a>
+            </li>
+
+            {%for category in categories %}
+
+                <li>
+                    <a class="" href="{{ url_for('index', category = category)}}">{{category.category_name}}</a>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
+
 {% for recipe in recipes %}
 
 {{ recipe }}
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-10 col-md-6">
 <div class="card text-center" style="width: 18rem;">
 {{recipe.image}}
         <img src="{{recipe.image}}" class="img-fluid img-thumbnail recipe-img" alt= "recipe.image"/>
@@ -32,21 +56,16 @@
             </div>
         <p class="card-text">{{recipe.description}}</p>
     </div>
-        <div class="card-body">
-            <div class="card-info">
-                <p class="recipe-description">
-                    {{recipe.description}}
-                </p>
-            </div>
-        <div class="card-footer">
+        
+    <div class="card-footer">
              <a href="{{ url_for('view_recipe', recipes_id=recipe._id)}}" class="btn btn-primary">View Recipe</a>
-        </div>
+    </div>
         
 
-        </div>    
+</div>    
 </div>
 </div>
-</div>
+
 
 {% endfor %}
 

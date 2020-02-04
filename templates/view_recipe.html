@@ -23,7 +23,7 @@
                     <ul>
                     {% for ingredient in recipes.ingredients %}
                         <li>
-                        {{ingredient}} 
+                        {{ingredients}} 
                         </li>
                         {%endfor%}
                     </ul>
@@ -32,7 +32,7 @@
                     <ul>
                     {% for instruction in recipes.instructions %}
                     <li>
-                    {{loop.index}}.{{instruction}} 
+                    {{loop.index}}.{{instructions}} 
                     </li>
                     {%endfor%}
                     </ul>
