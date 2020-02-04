@@ -14,14 +14,12 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html", 
-    recipes=mongo.db.recipes.find())
+    return render_template("index.html", recipes=mongo.db.recipes.find())
 
 
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template("add_recipe.html", page_title="Add Recipe",
-    recipes=mongo.db.recipes.find())
+    return render_template("add_recipe.html", page_title="Add Recipe", recipes=mongo.db.recipes.find())
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
@@ -29,15 +27,13 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('index'))
 
-@app.route('/view_recipe/<recipe_id>')
-def view_recipe():
-   return render_template("view_recipe.html")
-   recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes.id)})
+@app.route('/view_recipe/<recipes_id>')
+def view_recipe(recipes_id):
+   the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+   all_category = mongo.db.category.find() 
+   return render_template("view_recipe.html", recipes=the_recipe, category=all_category)
 
-   
-   recipes=mongo.db.recipes
-
-if __name__ == "__main__":
+if __name__ == "__main__":  
         app.run(host=os.environ.get("IP"),
         port=os.environ.get("PORT"),
         debug=True)
