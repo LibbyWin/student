@@ -49,7 +49,28 @@ def view_recipe(recipes_id):
 def edit_recipe(recipes_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     all_category = mongo.db.category.find()
-    return render_template("edit_recipe", recipes=the_recipe, category=all_category)
+    return render_template("edit_recipe.html", recipes=the_recipe, category=all_category)
+
+@app.route('/update_recipe/<recipes_id>', method=["POST"])
+def update_recipe(recipes_id):
+    recipes = mongo.bd.recipes
+    recipes.update( {'_id': ObjectId(recipes_id)},
+    {
+            "name": request.from.get("name",)
+            "category_name": request.form.get("category"),
+            "serves": request.form.get("serves"),
+            "price": request.form.get("price"),
+            "protein": request.form.get("protien"),
+            "ingredients": list(request.form.get("ingredients").split("\n")),
+            #.split("/n") allows for all new inputs to be added on a new line.
+            "instructions": list(request.form.get("instructions").split("\n")),
+            "description": request.form.get("description"),
+            "image": request.form.get("image_url"),
+
+    }
+
+    )
+
 
 if __name__ == "__main__":  
         app.run(host=os.environ.get("IP"),
