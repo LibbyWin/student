@@ -6,22 +6,21 @@
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
-          <img src="{{recipes.image}}" alt=>
-          
+          <img src="{{recipes.image}}" alt="food">
         </div>
         <div class="card-content">
             <span class="card-title">{{recipes.name}}</span>
             <p class="card-text">
                         <p class="card-text"><b>Category:</b> {{recipes.category}}</p>
-						<p class="card-text"><b>Price</b>£{{recipes.price}} </p>  
+						<p class="card-text"><b>Price</b> £ {{recipes.price}} </p>  
 						<p class="card-text"><b>Serves</b> {{recipes.serves}}</p>
-                        <p class="card-text"><b>Protein</b> {{recipes.protien}} g</p>   
+                        <p class="card-text"><b>Protein</b> {{recipes.protein}} g</p>   
             </p>
         </div>
         <div class="card-action">
         <p class="card-text"><b>Ingredients: </b>
                     <ul>
-                    {% for ingredient in recipes.ingredients %}
+                    {% for ingredients in recipes.ingredients %}
                         <li>
                         {{ingredients}} 
                         </li>
@@ -30,7 +29,7 @@
                     </p>
 					<p class="card-text"><b>Instructions:</b> 
                     <ul>
-                    {% for instruction in recipes.instructions %}
+                    {% for instructions in recipes.instructions %}
                     <li>
                     {{loop.index}}.{{instructions}} 
                     </li>

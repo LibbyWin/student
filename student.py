@@ -44,7 +44,9 @@ def view_recipe(recipes_id):
    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
    all_category = mongo.db.category.find() 
 
-   return render_template("view_recipe.html", recipes=the_recipe, category=all_category)
+   return render_template("view_recipe.html", 
+   recipes=the_recipe, 
+   category=all_category)
 
 
 
