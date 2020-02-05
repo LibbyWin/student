@@ -12,8 +12,6 @@ app.config["MONGO_URI"] = 'mongodb+srv://LWin_01:01Libby@StudentLife-ldsrb.mongo
 mongo = PyMongo(app)
 
 
-
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -38,7 +36,6 @@ def insert_recipe():
     recipes=mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('index'))
-
 
 
 
