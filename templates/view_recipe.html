@@ -10,11 +10,11 @@
         </div>
         <div class="card-content">
             <span class="card-title">{{recipes.name}}</span>
-            <p class="card-text">
-                        <p class="card-text"><b>Category:</b> {{recipes.category}}</p>
-						<p class="card-text"><b>Price</b> £ {{recipes.price}} </p>  
-						<p class="card-text"><b>Serves</b> {{recipes.serves}}</p>
-                        <p class="card-text"><b>Protein</b> {{recipes.protein}} g</p>   
+            <p class="card-text-01">
+                        <p class="card-text-01"><b>Category:</b> {{recipes.category_name}}</p>
+						<p class="card-text-01"><b>Price</b> £ {{recipes.price}} </p>  
+						<p class="card-text-01"><b>Serves</b> {{recipes.serves}}</p>
+                        <p class="card-text-01"><b>Protein</b> {{recipes.protein}} g</p>   
             </p>
         </div>
         <div class="card-action">
@@ -41,7 +41,7 @@
             <div class="buttons">
 
                 <a class="btn btn-primary" href="#" role="button">Delete</a>
-                <a class="btn btn-primary" href="#" role="button">Edit</a>
+                <a class="btn btn-primary" href="{{url_for('edit_recipe', recipes_id=recipes._id)}}" role="button">Edit</a>
 
             </div>
         </div>

@@ -43,14 +43,13 @@ def insert_recipe():
 def view_recipe(recipes_id):
    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
    all_category = mongo.db.category.find() 
+   return render_template("view_recipe.html", recipes=the_recipe, category=all_category)
 
-   return render_template("view_recipe.html", 
-   recipes=the_recipe, 
-   category=all_category)
-
-
-
-
+@app.route('/edit_recipe/<recipes_id>')
+def edit_recipe(recipes_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+    all_category = mongo.db.category.find()
+    return render_template("edit_recipe", recipes=the_recipe, category=all_category)
 
 if __name__ == "__main__":  
         app.run(host=os.environ.get("IP"),
