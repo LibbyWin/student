@@ -14,11 +14,16 @@ border: 0;
 body {
     font-family: Quicksand;
     color: #777777;
+    background-color: #777777;
 
 }
 nav .nav-wrapper {
     background-color: #26a69a;
 }
+nav .brand-logo {
+    padding-left: 10px;
+}
+
 h1 {
     font-family: Quicksand;
     text-transform: uppercase;
@@ -79,7 +84,7 @@ h2 {
   text-align: center;
   color: white;
   width: 100%;
-  padding-top: 90px;
+  padding-top: 30px;
 }
 
 .centered {
@@ -163,6 +168,11 @@ h2 {
 
 .card-content p {
     color: #26a69a;
+}
+
+.card-title {
+    color: #26a69a;
+    font-weight: 300;
 }
 /*-------------------ADD RECIPE---------------------*/
 
