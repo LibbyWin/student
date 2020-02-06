@@ -9,39 +9,40 @@
             <form action="{{ url_for('insert_recipe') }}" method="POST">
                 <div class="form-row">
     <div class="form-group col-md-6"  >
-
+<!--RECIPE NAME-->
       <input type="text" class="form-control" id="recipe_name" input name="recipe_name" placeholder="Recipe Name" required>
     </div>
     <div class="form-group col-md-6">
-  
+  <!--RECIPE PRICE-->
       <input type="number" class="form-control" id="recipe_price" input name="recipe_price" min="0.00" max="50.00" placeholder="Price" required>
     </div>
         <div class="serves col-md-6">
-
+<!--RECIPE SERVES-->
       <input type="number" class="form-control" id="recipe_serves" input name="recipe_serves" min="1" max="20" placeholder="Serves" required>
     </div>
         <div class="form-group col-md-6">
-
+<!--RECIPE PROTEIN-->
       <input type="text" class="form-control" id="recipe_protein" input name="recipe_protein" min="1" max="100" placeholder="Protein" required>
     </div>
   </div>
   <div class="form-group">
-
+<!--RECIPE INGREDIENTS-->
     <input type="text" class="form-control" id="recipe_ingredience" placeholder="Ingredience" input name="recipe_ingredience" required>
   </div>
   <div class="form-group">
-
+<!--RECIPE INSTRUCTIONS-->
     <input type="text" class="form-control" id="recipe_instructions" placeholder="Instructions" input name="recipe_instructions" required>
   </div>
   <div class="form-group">
-
+<!--RECIPE DESCRIPTION-->
     <input type="text" class="form-control" id="description" placeholder="Describe Your Meal" input name="description" required>
   </div>
   <div class="form-group">
-
+<!--RECIPE IMAGE-->
     <input type="text" class="form-control" id="description" placeholder="Add the web address here... eg. https://example.com" input name="description" pattern="https://.*" size="30" required>
   </div>
   <div class="form-row" required>
+  <!--RECIPE CATEGORY-->
     <div class="form-group col-md-4">
       <label for="inputState"></label>
       <select id="inputState" class="form-control" name="category">
@@ -52,6 +53,7 @@
       </select>
     </div>
   </div>
+ <!--SUBMIT BUTTON--> 
   <button type="submit" class="btn btn-primary" name="action">Submit</button>
             </form>
         </div>
