@@ -82,9 +82,9 @@ h2 {
 .container {
   position: relative;
   text-align: center;
-  color: white;
   width: 100%;
   padding-top: 30px;
+  color: white;
 }
 
 .centered {
@@ -94,6 +94,7 @@ h2 {
   transform: translate(-50%, -50%);
   font-size: 70%;
   font-weight: 300;
+  color: white;
 }
 
 .centered {
@@ -170,10 +171,14 @@ h2 {
     color: #26a69a;
 }
 
-.card-title {
+.card .card-content .card-title {
     color: #26a69a;
-    font-weight: 300;
 }
+.card .card-content p {
+    color: white;
+}
+
+
 /*-------------------ADD RECIPE---------------------*/
 
 .addyourrecipe {
@@ -213,6 +218,7 @@ input[type=submit]:hover {
 .addrecipe {
   background-color: transparent;
   padding: 20px;
+  color:white;
 }
 
 
@@ -222,6 +228,41 @@ input[type=submit]:hover {
     max-width: 50%;
 }
 
+.card .card-action:last-child {
+    color: white;
+}
+
+.card-text b {
+    color:#26a69a;
+    font-size: 20px;
+}
+ul:not(.browser-default)>li {
+    list-style-type: none;
+    padding: 1px;
+}
+
+
+/*-------------------EDIT RECIPE---------------------*/
+
+.addrecipe{
+    color: white;
+}
+
+input:not([type]), 
+input[type=text]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+input[type=email]:not(.browser-default), 
+input[type=url]:not(.browser-default), 
+input[type=time]:not(.browser-default), 
+input[type=date]:not(.browser-default), 
+input[type=datetime]:not(.browser-default), 
+input[type=datetime-local]:not(.browser-default), 
+input[type=tel]:not(.browser-default), 
+input[type=number]:not(.browser-default), 
+input[type=search]:not(.browser-default), 
+textarea.materialize-textarea {
+    background-color: #b1b1b1;
+}
 /*-----------footer-------------*/
 
 footer {
@@ -240,9 +281,19 @@ footer {
     font-size: 160%;
     margin: 1%;
     padding: 5%;
-    color: #777777;
+    color: #26a69a;
 }
 
 .copyright-text{
     text-align: center;
+    color: #29c4b4;
+}
+
+a {
+    color: #29c4b4;
+    size: 20px;
+}
+
+a:hover {
+    color: #00ffe5;
 }
