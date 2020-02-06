@@ -1,5 +1,4 @@
 # Student Life
-add picture here                =========================EDIT========================
 
 ## Purpose
 The purpose of this site is to allow for all students who visit a universtity library the ability to access Student Life. We are here to show students how they can make 
@@ -56,7 +55,7 @@ student budget. All students can access this site at the university library, mea
 
 
 ## Wireframes
-These can be seen in their own folder located in Static/wireframe.  [View wireframes](.../static/wireframe)       =========================EDIT========================
+These can be seen in their own folder located in Static/wireframe.   
 
 ## Version control
 - Git - Throughout the entire project, I have commited to using git as version controll in order to save and edit changes within my files and site.
@@ -99,6 +98,10 @@ Due to this error, extra care was taken to ensure that my spelling and use of 's
 5. MOBILE APPLICATION DOES IT WORK DOES IT NOT 
 DOES IT WORK ON SAFARI/FIREFOX/CHROME                              =========================EDIT========================
 DID YOU USE THE INSPECT TOOL 
+
+7. This site works on Safari, Chrome and Firefox broswers. However, there is no need for this application to be used on a mobile device due to the site
+only being with library computers at a campus/university. This was taken into consideration while editing the site, and I chose to addapt the site to fit 
+within smaller screens such as tablets. These are commonly used at universities and are handed out during classes occationally. 
 
 
 

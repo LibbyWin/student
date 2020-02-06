@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv("Secret")
 
 app.config["MONGO_DBNAME"] = 'StudentLife'
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")   #'mongodb+srv://LWin_01:01Libby@StudentLife-ldsrb.mongodb.net/StudentLife?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")   
                                     
 mongo = PyMongo(app)
 
@@ -76,6 +76,7 @@ def update_recipe(recipes_id):
 def delete_recipe(recipes_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipes_id)})
     return redirect(url_for('index'))
+
 
 if __name__ == "__main__":  
         app.run(host=os.environ.get("IP"),

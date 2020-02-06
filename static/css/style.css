@@ -5,6 +5,10 @@
 
 /* ------------------- Nav bar -----------------*/
 
+html {
+    scroll-behaviour: smooth;
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -221,7 +225,10 @@ input[type=submit]:hover {
   color:white;
 }
 
-
+.note {
+    position: relative;
+    text-align: center;
+}
 /*-----------View Recipe-------------*/
 
 .image-detail {
