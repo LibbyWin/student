@@ -98,6 +98,11 @@ h2 {
   transform: translate(-50%, -50%);
   font-size: 2.5em;
 }
+.student-header{
+    color: #36cebf;
+    font-size: 2.3em;
+    font-weight: 500;
+}
 
 /*-----------Drop down Bar -------------*/
 
