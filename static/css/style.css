@@ -308,6 +308,7 @@ a:hover {
 
 /*--MEDIA QUERY--*/
 
+/* for the writing ontop of the burger image */
 @media screen and (max-width: 480px) {
   body {
     font-size: 6px;

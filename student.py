@@ -17,7 +17,6 @@ mongo = PyMongo(app)
 
 #Connects the home page to mongodb in order to show the recipes 
 @app.route('/')
-@app.route('/index')
 def index():
     recipes=mongo.db.recipes.find()
     categories=mongo.db.categories.find()
@@ -35,7 +34,7 @@ def add_recipe():
 def insert_recipe():
     recipes=mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('index'))
+    return redirect(url_for('/'))
 
 #Previewing the whole recipe information
 @app.route('/view_recipe/<recipes_id>')
@@ -76,7 +75,7 @@ def update_recipe(recipes_id):
 @app.route('/delete_recipe/<recipes_id>')
 def delete_recipe(recipes_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipes_id)})
-    return redirect(url_for('index'))
+    return redirect(url_for('/'))
 
 
 if __name__ == "__main__":  
