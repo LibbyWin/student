@@ -6,7 +6,7 @@
 /* ------------------- Nav bar -----------------*/
 
 html {
-    scroll-behaviour: smooth;
+    scroll-behavior : smooth;
 }
 
 * {
@@ -298,7 +298,7 @@ footer {
 
 a {
     color: #29c4b4;
-    size: 20px;
+    resize : 20px;
 }
 
 a:hover {

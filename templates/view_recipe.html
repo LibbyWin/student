@@ -15,7 +15,7 @@
 						<p class="card-text-01"><b>Price</b> £ {{recipes.price}} </p>  
 						<p class="card-text-01"><b>Serves</b> {{recipes.serves}}</p>
                         <p class="card-text-01"><b>Protein</b> {{recipes.protein}} g</p>   
-            </p>
+            
         </div>
         <div class="card-action">
         <p class="card-text"><b>Ingredients: </b>
@@ -26,7 +26,7 @@
                         </li>
                         {%endfor%}
                     </ul>
-                    </p>
+                    
 					<p class="card-text"><b>Instructions:</b> 
                     <ul>
                     {% for instructions in recipes.instructions %}
@@ -35,7 +35,7 @@
                     </li>
                     {%endfor%}
                     </ul>
-                    </p>  
+                    
 
         <div class="card-action">
             <div class="buttons">

@@ -23,13 +23,16 @@ Future features which I will implement when I have more time will be ...
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
 loan eating out and buy the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when not on sale!)
 Whenever I was in the library, and needed a break i'd go to the shops to get some food ... so why not help other students make healthy student meals on a 
-student budget. All students can access this site at the university library, meaning thatonly students can access and delete the database.
+student budget. All students can access this site at the university library, meaning that only students can access and delete the database.
 
 ## Features
  The site contains multiple pages 
 - Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
 - Add A Recipe - This page contains all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
 - View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
+- Edit Recipe - 
+- Delete Recipe
+
 
 ## Overview Of MongoDB Database
 - Name - The name of the recipe.
@@ -95,12 +98,8 @@ allowing for the new edits to be seen within the previews. This happened when us
 where I had `{{ url_for('view_recipe', recipes_id=recipes._id)}}` meaning that I was trying to select multiple recipes when trying to locate one specific recipe.
 Due to this error, extra care was taken to ensure that my spelling and use of 's' were added only when neccessary.
 
-5. MOBILE APPLICATION DOES IT WORK DOES IT NOT 
-DOES IT WORK ON SAFARI/FIREFOX/CHROME                              =========================EDIT========================
-DID YOU USE THE INSPECT TOOL 
-
-7. This site works on Safari, Chrome and Firefox broswers. However, there is no need for this application to be used on a mobile device due to the site
-only being with library computers at a campus/university. This was taken into consideration while editing the site, and I chose to addapt the site to fit 
+7. This site works on Safari, Chrome and Firefox broswers. However, there is no need for this application to be used on a mobile device due to the site being
+ designed for library computers at a campus/university. This was taken into consideration while editing the site, and I chose to addapt the site to fit 
 within smaller screens such as tablets. These are commonly used at universities and are handed out during classes occationally. 
 
 
@@ -127,7 +126,7 @@ where is the live site hosted(heroku)
 
 ## Acknowledgements
 - Thanks to everyone on the Slack community for helping me with issues that I encountered.
-- Thank you to the Tutors at the Code Institute for their help when i was really struggling.
+- Thank you to the Tutors at the Code Institute for their help when I was really struggling.
 - Thanks to Brian Macharia, for the help and support with this project. 
 
 ## Disclaimer
