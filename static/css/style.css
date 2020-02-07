@@ -180,6 +180,7 @@ h2 {
 }
 .card .card-content p {
     color: white;
+    font-size: 20px;
 }
 
 
@@ -303,4 +304,12 @@ a {
 
 a:hover {
     color: #00ffe5;
+}
+
+/*--MEDIA QUERY--*/
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 6px;
+  }
 }

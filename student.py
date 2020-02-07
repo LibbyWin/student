@@ -2,13 +2,14 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
+#to get secret key file
 from os import path
 if path.exists("env.py"):
   import env 
 
 app = Flask(__name__)
 app.secret_key = os.getenv("Secret")
-
+#get secret key
 app.config["MONGO_DBNAME"] = 'StudentLife'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")   
                                     
