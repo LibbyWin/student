@@ -253,7 +253,7 @@ ul:not(.browser-default)>li {
 /*-------------------EDIT RECIPE---------------------*/
 
 .addrecipe{
-    color: white;
+    color:#161414;
 }
 
 input:not([type]), 
@@ -270,6 +270,18 @@ input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default), 
 textarea.materialize-textarea {
     background-color: #b1b1b1;
+}
+
+textarea.materialize-textarea {
+    overflow-y: hidden;
+    padding: .8rem 0 1.6rem 0;
+    resize: none;
+    min-height: 3rem;
+    padding-left: 20px;
+}
+
+.materialize-textarea{
+    font-size: 20px;
 }
 /*-----------footer-------------*/
 

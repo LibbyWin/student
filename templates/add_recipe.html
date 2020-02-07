@@ -68,7 +68,7 @@
                 <select>
                     <option value="" disabled selected>Choose a Category</option>
                         {% for category in categories %}
-                        {% if category == recipes.category_name %}
+                        {% if categories == recipes.category_name %}
                             <option selected value="{{categories.category_name}}">{{categories.category_name}}</option>
                         {% else %}
                             <option value="{{categories.category_name}}">{{categories.category_name}}</option>
