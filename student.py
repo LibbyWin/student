@@ -56,7 +56,7 @@ def edit_recipe(recipes_id):
     all_category = mongo.db.category.find()
     return render_template(
         "edit_recipe.html",
-        recipes=the_recipe,
+        recipe=the_recipe,
         category=all_category)
 
 #Updating your recipes
@@ -85,7 +85,7 @@ def update_recipe(recipes_id):
 def delete_recipe(recipes_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipes_id)})
     try:
-        recipes_col.delete_one({"_id": ObjectId(recipes_id)})   #check this is correct ------------------------------------------------------CHECK-----------------
+        recipes.delete_one({"_id": ObjectId(recipes_id)})   #check this is correct ------------------------------------------------------CHECK-----------------
         flash("You have deleted recipe")
     except Exception:
         flash("Deleting not succesfull")

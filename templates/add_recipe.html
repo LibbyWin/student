@@ -5,76 +5,84 @@
 <h2>{{ page_title }}</h2>
 
     <section class="add_recipe">
-    <div class="container">
+        <div class="container">
         <div class="addrecipe">
             <form action="{{ url_for('insert_recipe') }}" method="POST">
-                <div class="form-row">
-    <div class="form-group col-md-6"  >
+            <div class="row">
+                <form class="col s12">
                     <!--RECIPE NAME-->
-                    <label for="recipe_name">Recipe Name</label>
-                        <input type="text" class="form-control" id="recipe_name" input name="recipe_name" placeholder="Recipe Name" required>           
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_name" class="materialize-textarea" placeholder="Recipe Name" required></textarea>
+                        <label for="recipe_name">Recipe Name</label>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                    <!--RECIPE price-->
-                    <label for="recipe_price">Price</label>
-                        <input type="number" class="form-control" id="recipe_price" input name="recipe_price" min="0.00" max="50.00" placeholder="£..." required>
+                    <!--RECIPE SERVES -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_serves" class="materialize-textarea" value="{{recipe.serves}}"
+                        type="number" min="1" max="20" placeholder="How many people does it feed?" required></textarea>
+                        <label for="recipe_serves">Recipe Serves</label>
+                        </div>
                     </div>
-                    <div class="serves col-md-6">
-                    <!--RECIPE serves-->
-                    <label for="recipe_serves">Serves</label>
-                        <input type="number" class="form-control" id="recipe_serves" input name="recipe_serves" min="1" max="20" placeholder="Serves" required>
+                    <!--RECIPE PRICE -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_price" class="materialize-textarea" value="{{recipe.price}}"
+                        min="0.00" max="50.00" placeholder="£..." type="number"></textarea>
+                        <label for="recipe_price">Price</label>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                    <!--RECIPE protein-->
-                    <label for="recipe_protein">Protein</label>
-                        <input type="text" class="form-control" id="recipe_protein" input name="recipe_protein" min="1" max="100" placeholder="Protein" required>
+                    <!--RECIPE PROTEIN -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_protein" class="materialize-textarea" value="{{recipe.protein}}"
+                        min="1" max="100" type="number" placeholder="Protein" required></textarea>
+                        <label for="recipe_protein">Protein</label>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                <!--RECIPE INGREDIENTS-->
-                <label for="recipe_ingredients">Ingredients</label>
-                    <input type="text" class="form-control" id="recipe_ingredients" placeholder="Add ingredients here. Please press enter and start a new line after each ingredient." input name="recipe_ingredients" required>
-                </div>
-                <div class="form-group">
-                <!--RECIPE INSTRUCTIONS-->
-                <label for="recipe_instructions">Instructions</label>
-                    <input type="text" class="form-control" id="recipe_instructions" placeholder="Add instructions here. Please press enter and start a new line after each instruction." input name="recipe_instructions" required>
-                </div>
-                <div class="form-group">
-                <!--RECIPE DESCRIPTION-->
-                <label for="description">Recipe Description</label>
-                    <input type="text" class="form-control" id="description" placeholder="Describe Your Meal" input name="description" required>
-                </div>
-                <div class="form-group">
-                <!--IMAGE WEB ADDRESS-->
-                <label for="website">Web Address</label>
-                    <input type="text" class="form-control" id="website" placeholder="Add the web address here... eg. https://example.com" input name="website" pattern="https://.*" size="30">
-                </div>
-  <!--RECIPE CATEGORY-->
-    <div class="form-group col-md-4">
-      <label for="inputState"></label>
-      <select id="inputState" class="form-control" name="category">
-        <option value="" disabled selected>Meal Category</option>
-                  {% for category in recipes %}
-                      <option value="{{recipes.category_name}}">{{recipes.category_name}}</option>
-                  {% endfor %}
-      </select>
-    </div>
-  </div>
-        
+                    <!--RECIPE INGREDIENTS -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_ingredients" class="materialize-textarea" placeholder="Ingrdiente"></textarea> ------------------------------------------------------
+                        <label for="recipe_ingredients">Recipe Ingredients</label>
+                        </div>
+                    </div>
+                    <!--RECIPE INSTRUCTIONS -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_instructions" class="materialize-textarea" placeholder="Instructions"></textarea> ----------------------------------------------
+                        <label for="recipe_instructions">Recipe Instructions</label>
+                        </div>
+                    </div>
+                    <!--RECIPE DESCRIPTION -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <textarea id="recipe_description" class="materialize-textarea" placeholder="Description"></textarea>
+                        <label for="recipe_description">Recipe Description</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose a Category</option>
+                        {% for category in categories %}
+                        {% if category == recipes.category_name %}
+                            <option selected value="{{categories.category_name}}">{{categories.category_name}}</option>
+                        {% else %}
+                            <option value="{{categories.category_name}}">{{categories.category_name}}</option>
+                        {% endif %}
+                        {% endfor %}
+                </select>
+                <label>Category</label>
+            </div>
+    
+                
  <!--SUBMIT BUTTON--> 
   <button type="submit" class="btn btn-primary" name="action">Submit</button>
             </form>
         </div>
-    </div>
-<!--SECTION FOR NOTE ON IMAGES-->
-    <div class="row note">
-    <div class="col s12">
-        <p> PLEASE NOTE!
-            <br>
-                 When uploading an image please create an account on www.imgbb.com, upload your image and use the images URL to paste in the image section of this site.
-        </p>
-    </div>
     </div>
     </section>
 
