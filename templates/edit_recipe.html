@@ -4,36 +4,53 @@
 
 <h2>{{ page_title }}</h2>
 
-    <section class="add_recipe">
+    <section class="edit_recipe">
         <div class="container">
             <div class="addrecipe" style="color:white;">
                 <form action="{{ url_for('insert_recipe') }}" method="POST">
                  <div class="form-row">
                     <div class="form-group col-md-6"  >
-                        <input type="text" class="form-control" id="recipe_name" input name="recipe_name" placeholder="Recipe Name" required>
+                    <!--RECIPE NAME-->
+                    <label for="recipe_name">Recipe Name</label>
+                        <input type="text" class="form-control" id="recipe_name" input name="recipe_name" placeholder="Recipe Name" required>           
                     </div>
                     <div class="form-group col-md-6">
-                        <input type="number" class="form-control" id="recipe_price" input name="recipe_price" min="0.00" max="50.00" placeholder="Price" required>
+                    <!--RECIPE price-->
+                    <label for="recipe_price">Price</label>
+                        <input type="number" class="form-control" id="recipe_price" input name="recipe_price" min="0.00" max="50.00" placeholder="£..." required>
                     </div>
                     <div class="serves col-md-6">
+                    <!--RECIPE serves-->
+                    <label for="recipe_serves">Serves</label>
                         <input type="number" class="form-control" id="recipe_serves" input name="recipe_serves" min="1" max="20" placeholder="Serves" required>
                     </div>
                     <div class="form-group col-md-6">
+                    <!--RECIPE protein-->
+                    <label for="recipe_protein">Protein</label>
                         <input type="text" class="form-control" id="recipe_protein" input name="recipe_protein" min="1" max="100" placeholder="Protein" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="recipe_ingredience" placeholder="Ingredience" input name="recipe_ingredience" required>
+                <!--RECIPE INGREDIENTS-->
+                <label for="recipe_ingredients">Ingredients</label>
+                    <input type="text" class="form-control" id="recipe_ingredients" placeholder="Add ingredients here. Please press enter and start a new line after each ingredient." input name="recipe_ingredients" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="recipe_instructions" placeholder="Instructions" input name="recipe_instructions" required>
+                <!--RECIPE INSTRUCTIONS-->
+                <label for="recipe_instructions">Instructions</label>
+                    <input type="text" class="form-control" id="recipe_instructions" placeholder="Add instructions here. Please press enter and start a new line after each instruction." input name="recipe_instructions" required>
                 </div>
                 <div class="form-group">
+                <!--RECIPE DESCRIPTION-->
+                <label for="description">Recipe Description</label>
                     <input type="text" class="form-control" id="description" placeholder="Describe Your Meal" input name="description" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="description" placeholder="Add the web address here... eg. https://example.com" input name="description" pattern="https://.*" size="30" required>
+                <!--IMAGE WEB ADDRESS-->
+                <label for="website">Web Address</label>
+                    <input type="text" class="form-control" id="website" placeholder="Add the web address here... eg. https://example.com" input name="website" pattern="https://.*" size="30">
                 </div>
+                <!--DELETE BUTTON AND SUBMIT BUTTON-->
                     <button type="button" class="btn btn-danger">Delete</button>
                     <button type="submit" class="btn btn-primary" name="action">Submit</button>
                 </form>
