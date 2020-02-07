@@ -20,14 +20,17 @@ mongo = PyMongo(app)
 def index():
     recipes=mongo.db.recipes.find()
     categories=mongo.db.categories.find()
-    return render_template("index.html", recipes=recipes, categories=categories,)
+    return render_template(
+        "index.html", 
+        recipes=recipes, 
+        categories=categories,)
 
 #allowing you to add a whole new recipe to the database and site
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template("add_recipe.html", page_title="Add Recipe", 
-    recipes=mongo.db.recipes.find(),
-    categories=mongo.db.categories.find())
+    recipes=mongo.db.recipes.find()
+    categories=mongo.db.categories.find()
+    return render_template("add_recipe.html", page_title="Add Recipe")
 
 #allowing you to add a whole new recipe to the database and site
 @app.route('/insert_recipe', methods=['POST'])
@@ -41,14 +44,20 @@ def insert_recipe():
 def view_recipe(recipes_id):
    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
    all_category = mongo.db.category.find() 
-   return render_template("view_recipe.html", recipes=the_recipe, category=all_category)
+   return render_template(
+       "view_recipe.html",
+        recipes=the_recipe, 
+        category=all_category)
 
 #editing recipe information
 @app.route('/edit_recipe/<recipes_id>')
 def edit_recipe(recipes_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     all_category = mongo.db.category.find()
-    return render_template("edit_recipe.html", recipes=the_recipe, category=all_category)
+    return render_template(
+        "edit_recipe.html",
+        recipes=the_recipe,
+        category=all_category)
 
 #Updating your recipes
 @app.route('/update_recipe/<recipes_id>', methods=["POST"])
@@ -72,9 +81,14 @@ def update_recipe(recipes_id):
     return redirect(url_for('index'))
 
 #For deleting recipes
-@app.route('/delete_recipe/<recipes_id>')
+@app.route('/delete_recipe/<recipes_id>', methods=["GET", "POST"])
 def delete_recipe(recipes_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipes_id)})
+    try:
+        recipes_col.delete_one({"_id": ObjectId(recipes_id)})   #check this is correct ------------------------------------------------------CHECK-----------------
+        flash("You have deleted recipe")
+    except Exception:
+        flash("Deleting not succesfull")
     return redirect(url_for('/'))
 
 
