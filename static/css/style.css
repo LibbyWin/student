@@ -183,6 +183,16 @@ h2 {
     font-size: 20px;
 }
 
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* width: 100%; */
+}
 
 /*-------------------ADD RECIPE---------------------*/
 
@@ -251,10 +261,6 @@ ul:not(.browser-default)>li {
 
 
 /*-------------------EDIT RECIPE---------------------*/
-
-.addrecipe{
-    color:#161414;
-}
 
 input:not([type]), 
 input[type=text]:not(.browser-default), 

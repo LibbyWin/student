@@ -4,87 +4,81 @@
 
 <h2>{{ page_title }}</h2>
 
-    <section class="add_recipe">
-        <div class="container">
-        <div class="addrecipe">
-            <form action="{{ url_for('insert_recipe') }}" method="POST">
-            <div class="row">
-                <form class="col s12">
-                    <!--RECIPE NAME-->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_name" class="materialize-textarea" placeholder="Recipe Name" required></textarea>
-                        <label for="recipe_name">Recipe Name</label>
-                        </div>
-                    </div>
-                    <!--RECIPE SERVES -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_serves" class="materialize-textarea" value="{{recipe.serves}}"
-                        type="number" min="1" max="20" placeholder="How many people does it feed?" required></textarea>
-                        <label for="recipe_serves">Recipe Serves</label>
-                        </div>
-                    </div>
-                    <!--RECIPE PRICE -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_price" class="materialize-textarea" value="{{recipe.price}}"
-                        min="0.00" max="50.00" placeholder="£..." type="number"></textarea>
-                        <label for="recipe_price">Price</label>
-                        </div>
-                    </div>
-                    <!--RECIPE PROTEIN -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_protein" class="materialize-textarea" value="{{recipe.protein}}"
-                        min="1" max="100" type="number" placeholder="Protein" required></textarea>
-                        <label for="recipe_protein">Protein</label>
-                        </div>
-                    </div>
-                    <!--RECIPE INGREDIENTS -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_ingredients" class="materialize-textarea" placeholder="Ingrdiente"></textarea> ------------------------------------------------------
-                        <label for="recipe_ingredients">Recipe Ingredients</label>
-                        </div>
-                    </div>
-                    <!--RECIPE INSTRUCTIONS -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_instructions" class="materialize-textarea" placeholder="Instructions"></textarea> ----------------------------------------------
-                        <label for="recipe_instructions">Recipe Instructions</label>
-                        </div>
-                    </div>
-                    <!--RECIPE DESCRIPTION -->
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea id="recipe_description" class="materialize-textarea" placeholder="Description"></textarea>
-                        <label for="recipe_description">Recipe Description</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="input-field col s12">
-                <select>
+<section class="add_recipe">
+	<div class="container">
+		<div class="addrecipe">
+			<form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+				<div class="row">
+					<!--RECIPE NAME-->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="name" class="materialize-textarea" placeholder="Recipe Name"
+                            name="name" required></textarea>
+							<label for="name">Recipe Name</label>
+						</div>
+					</div>
+					<!--RECIPE SERVES -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="serves" class="materialize-textarea"
+                        type="number" min="1" max="20" placeholder="How many people does it feed?"
+                        name="serves" required></textarea>
+							<label for="serves">Recipe Serves</label>
+						</div>
+					</div>
+					<!--RECIPE PRICE -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="price" class="materialize-textarea"
+                        min="0.00" max="50.00" placeholder="£..." type="number" name="price"></textarea>
+							<label for="price">Price</label>
+						</div>
+					</div>
+					<!--RECIPE PROTEIN -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="protein" class="materialize-textarea"
+                        min="1" max="100" placeholder="Protein" type="number" name="protein"></textarea>
+							<label for="protein">Protein</label>
+						</div>
+					</div>
+					<!--RECIPE INGREDIENTS -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="ingredients" class="materialize-textarea" placeholder="Ingredients. Please press enter for a new line of ingredients." name="ingredients"></textarea>
+							<label for="ingredients">Recipe Ingredients</label>
+						</div>
+					</div>
+					<!--RECIPE INSTRUCTIONS -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="instructions" class="materialize-textarea" placeholder="Instructions. Please press enter for a new line of instructions." name="instructions"></textarea>
+							<label for="instructions">Recipe Instructions</label>
+						</div>
+					</div>
+					<!--RECIPE DESCRIPTION -->
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="description" class="materialize-textarea" placeholder="Description" name="description"></textarea>
+							<label for="description">Recipe Description</label>
+						</div>
+					</div>
+				</div>
+				<div class="input-field col s12">
+					<select name="category_name">
                     <option value="" disabled selected>Choose a Category</option>
-                        {% for category in categories %}
-                        {% if categories == recipes.category_name %}
-                            <option selected value="{{categories.category_name}}">{{categories.category_name}}</option>
-                        {% else %}
-                            <option value="{{categories.category_name}}">{{categories.category_name}}</option>
-                        {% endif %}
+                        {% for cat in categories %}
+                            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                         {% endfor %}
                 </select>
-                <label>Category</label>
-            </div>
-    
-                
- <!--SUBMIT BUTTON--> 
-  <button type="submit" class="btn btn-primary" name="action">Submit</button>
-            </form>
-        </div>
-    </div>
-    </section>
+					<label>Category</label>
+				</div>
+				<!--DELETE BUTTON AND SUBMIT BUTTON-->
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</section>
 
 
 

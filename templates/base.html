@@ -1,112 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
- <head> 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!----------------------- google font ----------------------->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
- <!----------------------- bootstrap ----------------------->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
- <!----------------------- materialize --------------------->
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <!--------------------- font awesome ----------------------->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
- <!----------------------- My Style sheet ----------------------->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!----------------------- google font ----------------------->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<!----------------------- bootstrap ----------------------->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		type="text/css" />
+	<!----------------------- materialize --------------------->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--------------------- font awesome ----------------------->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+		integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<!----------------------- My Style sheet ----------------------->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 
-    <title>Student Life</title>
+	<title>Student Life</title>
 </head>
 
 <!----------------------- body ----------------------->
 
 <body>
-    <header> 
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('index')}}" class="brand-logo">Student Life</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a></li>
-                    <li><a href="{{ url_for('index') }}">All Recipes</a></li>
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="{{url_for('index')}}" class="brand-logo">Student Life</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a></li>
+					<li><a href="{{ url_for('index') }}">All Recipes</a></li>
 
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a></li>
-                    <li><a href="{{ url_for('index') }}">All Recipes</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="{{ url_for('add_recipe') }}">Add Your Recipes</a></li>
+					<li><a href="{{ url_for('index') }}">All Recipes</a></li>
 
-                </ul>
-            </div>
-        </nav>
-    </header>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
 
-<!-------------------------------image header and text---------------------------------->
+	<!-------------------------------image header and text---------------------------------->
 
-<div class="container">
-    <img src="../static/images/burger.jpg" alt="burger" style="width:100%">
-        
-        <div class="centered col s10 m">
-        
-        <h2 class="student-header"> STUDENT LIFE </h2>
-        <br>
+	<div class="container">
+		<img src="../static/images/burger.jpg" alt="burger" style="width:100%">
+
+		<div class="centered col s10 m">
+
+			<h2 class="student-header"> STUDENT LIFE </h2>
+			<br>
         We're here to help you find easy, low cost student friendly meals. Without losing the taste.
-        <br>
+			<br>
         Looking for something new or add your own student meals!
         </div>
-</div>
+		</div>
 
 
-  <!--------------------------- Main Content ----------------------------->
-  <!-- wrapping it within a div makes it more presentable -->
-    <div class="container">
-   
-        {% block content %}
+		<!--------------------------- Main Content ----------------------------->
+		<!-- wrapping it within a div makes it more presentable -->
+		<div class="container">
 
-        {% endblock %}
+			{% block content %}
 
-    </div>
+			{% endblock %}
 
-
-<!--------------------------- Footer ----------------------------->
-
-    <footer>
-
-    <ul class="social-networks">
-        <li> <a href="hhtp://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-        <li> <a href="hhtp://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-        <li> <a href="hhtp://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
-        <li> <a href="hhtp://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    </ul>
-    
-    <!----------------------- Copy Right Info ----------------------->
-    <p class="copyright-text">Copyright &copy; Student Life 2020</p>
-
-    </footer>
-
-    <!----------------------- jQuery first, then Popper.js, then Bootstrap JS ----------------------->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		</div>
 
 
+		<!--------------------------- Footer ----------------------------->
 
-    <!----------------------- materialize ----------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<footer>
 
-    <script type="text/javascript">
-            $(document).ready(function() {
+			<ul class="social-networks">
+				<li> <a href="hhtp://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+				<li> <a href="hhtp://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+				<li> <a href="hhtp://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+				<li> <a href="hhtp://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			</ul>
+
+			<!----------------------- Copy Right Info ----------------------->
+			<p class="copyright-text">Copyright &copy; Student Life 2020</p>
+
+		</footer>
+
+		<!----------------------- jQuery first, then Popper.js, then Bootstrap JS ----------------------->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+		</script>
+
+
+
+		<!----------------------- materialize ----------------------->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
                 $('select').material_select();
                 $(".button-collapse").sideNav();
-                  $('#ingredients').val('New Text');
-                M.textareaAutoResize($('#ingredients'));
-                $('#instructions').val('New Text');
-                M.textareaAutoResize($('#instructions'));
         });
-    </script>
+		</script>
 
 </body>
