@@ -2,13 +2,14 @@
 
 ## Purpose
 The purpose of this site is to allow for all students who visit a universtity library the ability to access Student Life. We are here to show students how they can make 
-delicious meals at a low cost which wont eat into their student loan. 
+delicious meals at a low cost which won't eat into their student loan. 
 
 ## High Level Requirements
 The creation of this website allows for users to ... 
-1. Access up to 3 categories of foods ie. Dinner, Breakfast and Protein Meals.
+1. Access up to 3 categories of foods ie. Breakfast, Dinner and Protein Meals.
 2. Allow each recipe to be displayed seperately to have a full screen view, showing the ingredience and instructions.
 3. Allow users to edit, delete and submit new recipes. 
+4. Scroll to the top button to ensure ease of use of the site.
 
 ## Future Features
 Future features which I will implement when I have more time will be ...
@@ -16,22 +17,23 @@ Future features which I will implement when I have more time will be ...
 1. Allowing users to log in to the site and log out. Meaning that only they can edit, delete and submit their recipes.
 2. Create a rating system that allows for users to rate recipes from 0 to 10.
 3. Create a feedback request form so that the author of a recipe can see how well they are doing. 
-4. Create a commenting section allowing for users to suggest improvements/feedback on recipes. 
+4. Create a comment section allowing for users to suggest improvements/feedback on recipes. 
 5. Have a dropdown which allowed you to filter through if you wanted 'Breakfast', 'Lunch' or 'Dinner'.
+6. Allow for each user to add their own images to their recipes.
 
 
 ## User Stories
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
-loan eating out and buy the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when not on sale!)
+loan eating out and buying the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when it wasn't on sale!)
 Whenever I was in the library, and needed a break i'd go to the shops to get some food ... so why not help other students make healthy student meals on a 
-student budget. All students can access this site at the university library, meaning that only students can access and delete the database.
+student budget. All students can access this site at the university library, meaning that only students can delete and edit the sites database.
 
 ## Features
  The site contains multiple pages 
-- Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
-- Add A Recipe - This page contains all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
+- Home page - This contain's the home page image with information on what the site containts. Below this contain's all the recipes within the database. 
+- Add A Recipe - This page contain's all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
 - View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
-- Edit Recipe -  Edit your own or someone elses recipe. The submit button (when clicked) shows a pop up asking if they would like to submit 
+- Edit Recipe -  Edit your own or someone else's recipe. The submit button (when clicked) shows a pop up asking if they would like to submit 
 or cancel their edit to make sure they know that they have edited the recipe.
 - Delete Recipe - Completely remove a recipe with this button. However a confirmation pop up will appear to make sure the user knows that they are deleting 
 a recipe.
@@ -39,22 +41,22 @@ a recipe.
 
 ## Overview Of MongoDB Database
 - Name - The name of the recipe.
-- Category - Select which category the recipe goes into ie. Breakfast, Lunch/Dinner or Protein Meal.
-- Price - What the recipe costs?
+- Category_name - Select which category the recipe goes into ie. Breakfast, Lunch/Dinner or Protein Meal.
+- Price - What the recipes costs?
 - Protein - How much protein is in the recipe?
 - Serves - How many people can this recipe serve?
-- Ingredience -  What ingredience do you need to make the recipe?
+- Ingredients -  What ingredients do you need to make the recipe?
 - Instructions - How do you make the recipe? (in a step by step guide.)
 - Description - How would you describe the recipe?
 
 ## Technologies Used
 - Heroku - I used Heroku to deploy my site as it allows for me to use python within my project.
-- mongoDB - Using this document based database, it allowed for me to add in large amounts of data (recipes) which can be easily stored within the cloud.
+- MongoDB - Using this document based database, it allowed for me to add in large amounts of data (recipes) which can be easily stored within the cloud.
 - Python - The use of Python within this project allowed for back end programming language for this app.
 - HTML - With the use of HTML it allowed for the initial content to be creates and viewed on this app.
 - CSS - Allows for custom styles to be created and added to my HTML.
 - Google Fonts - Selected Quicksand font to add a sence of style to the writing. 
-- Bootstrap - Creates a creative and responsive grid system, added pre-made styles and allows for jQuery scripts to be added.
+- Materialize - Creates a creative and responsive grid system, added pre-made styles and allows for jQuery scripts to be added.
 - Font Awesome - Used to add icons within the app.
 - Flask - Added a python micro web framework, which provides libraries, tools and technologies to create a web application.
 - JavaScript - Used to enable bootstrap code for mobile devices.
@@ -76,14 +78,14 @@ trying to figure out the problem I repushed my work to github, made Heroku the m
 and pushed all my code to github I found that the error occured due to my Procfile containing no information. After recreating my Procfile and pushing it 
 to github and Heroku, this fixed the error and allowed me to preview my file on Heroku.
 
-2. While importing my code within jinja, I canme across multiple issues with {{_______}}. My issues came from not opening and closing my jinja correctly 
-and due to not understanding that when redirecting to a view to display information a certain singular database iten needs to pass in some way of itentifying 
+2. While importing my code within jinja, I came across multiple issues with {{_______}}. My issues came from not opening and closing my jinja correctly 
+and due to not understanding that when redirecting to a view to display information a certain singular database item needs to pass in some way of itentifying 
 that item. This was through giving an ID to the database item. However I went over this multiple times within the course and got extra help to understand where 
 I was going wrong.
 
 3. Due to an error with mongodb, I originally started writing my code within JsFiddle. An online code editor which allows you to preview your work immedietly.
-This ensured me that I was creating the correct code even though I couldnt see it on my preview when using GitPod. When I had Correctly made my database 
-within mongoDB again I reconnected my site to mongo ensuring that the names and collection names matched up due to mongoDB being case sensitive. This 
+This ensured me that I was creating the correct code even though I couldn't see it on my preview when using GitPod. When I had correctly made my database 
+within MongoDB again, I reconnected my site to mongo ensuring that the names and collection names matched up due to mongoDB being case sensitive. This 
 initially created some errors with my site as I was using capital letters instead of lower case.
 
 4. When creating an environment.py fle I mistakenly wrote in error within my code which meant that there wasnt a connection to the rest of the files due 
@@ -93,16 +95,16 @@ os.environ.setdefault
 ```
 which effectively connected mt env.py file to the rest of the code.
 
-5. When editing my work and going onto preview there was an issue which meant that my recent edits hadnt been updating within the preview. To fix this, I had to 
-open the chrome developer tool, long click on the reload button, and click on 'Empty cashe and hard reload'. This deleted all the recent cashe and forced a roload 
+5. When editing my work and going onto preview there was an issue which meant that my recent edits hadn't been updating within the preview. To fix this, I had to 
+open the Chrome developer tool, long click on the reload button, and click on 'Empty cashe and hard reload'. This deleted all the recent cashe and forced a roload 
 allowing for the new edits to be seen within the previews. This happened when using Safari, Chrome and Firefox. 
 
-6. Near the end of testing there was a large error caused by Pymongo. Stating that 'Cannot set option after executing query'. This was due to an error within my Index.html page 
+6. Near the end of testing, there was a large error caused by Pymongo. Stating that 'Cannot set option after executing query'. This was due to an error within my Index.html page 
 where I had `{{ url_for('view_recipe', recipes_id=recipes._id)}}` meaning that I was trying to select multiple recipes when trying to locate one specific recipe.
 Due to this error, extra care was taken to ensure that my spelling and use of 's' were added only when neccessary.
 
 7. This site works on Safari, Chrome and Firefox broswers. However, there is no need for this application to be used on a mobile device due to the site being
- designed for library computers at a campus/university. This was taken into consideration while editing the site, and I chose to addapt the site to fit 
+ designed for library computers at a campus/university. This was taken into consideration while editing the site, and I chose to adapt the site to fit 
 within smaller screens such as tablets. These are commonly used at universities and are handed out during classes occationally. 
 
 8. There is an error occuring which I was unable to correct due to time restrictions. This error occures when adding a new recipe to 
