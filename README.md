@@ -24,7 +24,7 @@ Future features which I will implement when I have more time will be ...
 
 ## User Stories
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
-loan eating out and buying the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's,(even when it wasn't on sale!)
+loan eating out and buying the most expensive things in the supermarkets. From fresh fruit and veg which i'd never eat to Ben and Jerry's (even when it wasn't on sale!)
 Whenever I was in the library, and needed a break i'd go to the shops to get some food ... so why not help other students make healthy student meals on a 
 student budget. All students can access this site at the university library, meaning that only students can delete and edit the sites database.
 
