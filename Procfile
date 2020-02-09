@@ -1,1 +1,0 @@
-web: python student.py
