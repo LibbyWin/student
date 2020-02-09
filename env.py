@@ -5,3 +5,4 @@ os.environ.setdefault("MONGO_URI", "mongodb+srv://LWin_01:01Libby@StudentLife-ld
 os.environ["secret_key"] = "Secret"
 COLLECTION_NAME = "StudentLife"
 
+

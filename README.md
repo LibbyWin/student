@@ -112,6 +112,7 @@ to check there were no errors.
 ## Deployment
 where is the live site hosted(heroku)
                                                  =========================EDIT========================
+- 
 
 ## When commiting to Github, follow theres steps...
 1. Ensure you are on the /environment/ in your ternimal.

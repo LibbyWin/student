@@ -2,7 +2,7 @@
 {% block content %}
 <title>Student Life - Edit Recipe</title>
 
-<h2>{{ page_title }}</h2>
+<h2>Edit A Recipe</h2>
 
 <section class="edit_recipe">
 	<div class="container">
@@ -43,9 +43,9 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<textarea id="ingredients" class="materialize-textarea" placeholder="Ingredients. Please press enter for a new line of ingredients." name="ingredients">
-                            {% for ingredient in recipe.ingredients -%}
+                            {%- for ingredient in recipe.ingredients -%}
                             {{ ingredient }}
-                            {% endfor -%}
+                            {% endfor %}
                         </textarea>
 						<label for="ingredients">Recipe Ingredients</label>
 					</div>
@@ -54,9 +54,9 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<textarea id="instructions" class="materialize-textarea" name="instructions">
-                            {% for instruction in recipe.instructions -%}
+                            {%- for instruction in recipe.instructions -%}
                             {{ instruction }}
-                            {% endfor -%}
+                            {% endfor %}
                         </textarea>
 						<label for="instructions">Recipe Instructions</label>
 					</div>
@@ -67,24 +67,20 @@
 						<textarea id="description" class="materialize-textarea" name="description">{{recipe.description}}</textarea>
 						<label for="description">Recipe Description</label>
 					</div>
-				</div><!--
-				<div class="input-field col s12">
-					<select name="category_name">
-                    <option value="" disabled selected>Choose a Category</option>
-                        {% for cat in categories %}
-                            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                        {% endfor %}
-                </select>
-					<label>Category</label>
 				</div>
-		</div>-->
-		<!--DELETE BUTTON AND SUBMIT BUTTON-->
-		<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-	</div>
+
+				<!--DELETE BUTTON AND SUBMIT BUTTON-->
+				<button type="submit" class="btn btn-primary" onclick="editFunction()">Submit</button>
+			</form>
+		</div>
 	</div>
 </section>
 
+<script>
+	function editFunction() {
+  confirm("Are you sure you'd like to Edit this recipe?\nClick Ok to Edit\nClick Cancel to go back");
+}
+</script>
 
 
 {% endblock %}
