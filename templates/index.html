@@ -2,52 +2,45 @@
 {% block content %}
 
 <title>Student Life - Index</title>
-<!--Choose category dropdown button-->
-<div class="row">
-	<div class="input-field col s12">
-		<select id="category" name="category_name">
-                        <option value="" disabled selected>Choose Category</option>
-                            {% for category in categories %}
-                        <option value="{{category.category_name}}">{{category.category_name}}</option>
-                            {% endfor %}
-                    </select>
-		<label>Recipe Category</label>
-	</div>
-</div>
+
+<h2>All Recipes</h2>
+
 <!--view all recipes within mongodb-->
 
-{% for recipe in recipes %}
-
 <div class="row">
-	<div class="col s12 m4">
-		<div class="card col s12 m4">
+	{% for recipe in recipes %}
+	<div class="col s12 m6">
+		<div class="card horizontal">
 			<div class="card-image">
-				<!--recipe image-->
 				<img src="../static/images/chef.jpg" alt="Chef Cooking" height="280" width="80">
-        </div>
-				<div class="card-content">
-					<!--recipe name-->
-					<span class="card-title"><strong>{{recipe.name}}</strong></span>
-					<p class="card-text-01">
-						<!--added icons for recipe small detail-->
-						<p class="card-text"><i class="material-icons">people</i> {{recipe.serves}}</p>
-						<p class="card-text"><i class="material-icons">attach_money</i> {{recipe.price}}</p>
-						<p class="card-text"><i class="material-icons">fitness_center</i> {{recipe.protein}} g</p>
-				</div>
-				<div class="card-content">
-					<!--added recipe description-->
-					<p>{{recipe.description}}</p>
-				</div>
-				<div class="card-action">
-					<!--direct when clicked to individual recipe card-->
-					<a href="{{ url_for('view_recipe', recipes_id=recipe._id)}}" class="waves-effect waves-light btn">
-						View Recipe</a>
+            </div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<!--recipe name-->
+						<span class="card-title"><strong>{{recipe.name}}</strong></span>
+						<p class="card-text-01">
+							<!--added icons for recipe small detail-->
+							<p class="card-text"><i class="material-icons">people</i> {{recipe.serves}}</p>
+							<p class="card-text"><i class="material-icons">attach_money</i> {{recipe.price}}</p>
+							<p class="card-text"><i class="material-icons">fitness_center</i> {{recipe.protein}} g</p>
+					</div>
+					<div class="card-content">
+						<!--added recipe description-->
+						<p>{{recipe.description}}</p>
+					</div>
+					<div class="card-action">
+						<!--direct when clicked to individual recipe card-->
+						<a href="{{ url_for('view_recipe', recipes_id=recipe._id)}}"
+							class="waves-effect waves-light btn">
+							View Recipe</a>
+					</div>
 				</div>
 			</div>
 		</div>
+		{% endfor %}
 	</div>
 
 
-	{% endfor %}
+
 
 	{% endblock %}

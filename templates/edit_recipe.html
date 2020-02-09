@@ -10,14 +10,14 @@
 			<form action="{{ url_for('update_recipe', recipes_id=recipe._id) }}" method="POST" class="col s12">
 				<!--RECIPE NAME-->
 				<div class="row">
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 						<textarea id="name" class="materialize-textarea" name="name">{{recipe.name}}</textarea>
 						<label for="name">Recipe Name</label>
 					</div>
 				</div>
 				<!--RECIPE SERVES -->
 				<div class="row">
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 						<textarea id="serves" class="materialize-textarea"
                         type="number" min="1" max="20" name="serves">{{recipe.serves}}</textarea>
 						<label for="serves">Recipe Serves</label>
@@ -25,7 +25,7 @@
 				</div>
 				<!--RECIPE PRICE -->
 				<div class="row">
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 						<textarea id="price" class="materialize-textarea"
                         min="0.00" max="50.00" placeholder="£..." type="number" name="price">{{recipe.price}}</textarea>
 						<label for="price">Price</label>
@@ -33,7 +33,7 @@
 				</div>
 				<!--RECIPE PROTEIN -->
 				<div class="row">
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 						<textarea id="protein" class="materialize-textarea"
                         min="1" max="100" type="number" name="protein">{{recipe.protein}}</textarea>
 						<label for="protein">Protein</label>
@@ -43,7 +43,7 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<textarea id="ingredients" class="materialize-textarea" placeholder="Ingredients. Please press enter for a new line of ingredients." name="ingredients">
-                            {%- for ingredient in recipe.ingredients -%}
+                            {% for ingredient in recipe.ingredients %}
                             {{ ingredient }}
                             {% endfor %}
                         </textarea>
@@ -54,7 +54,7 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<textarea id="instructions" class="materialize-textarea" name="instructions">
-                            {%- for instruction in recipe.instructions -%}
+                            {% for instruction in recipe.instructions %}
                             {{ instruction }}
                             {% endfor %}
                         </textarea>
@@ -68,7 +68,6 @@
 						<label for="description">Recipe Description</label>
 					</div>
 				</div>
-
 				<!--DELETE BUTTON AND SUBMIT BUTTON-->
 				<button type="submit" class="btn btn-primary" onclick="editFunction()">Submit</button>
 			</form>
