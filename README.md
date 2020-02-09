@@ -149,6 +149,7 @@ to check there were no errors.
 ## Credits
 - All images were sourced from Pixabay.com and Pexels.com
 - Thanks to all my university friends who told me about all their weird and cheap student meals, even if some were not included in the website.
+- Added Scroll to top butten thanks to the help of W3C.
 
 ## Acknowledgements
 - Thanks to everyone on the Slack community for helping me with issues that I encountered.
