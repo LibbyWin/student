@@ -12,7 +12,7 @@ The creation of this website allows for users to ...
 4. Scroll to the top button to ensure ease of use of the site.
 
 ## Future Features
-Future features which I will implement when I have more time will be ...
+Future features which I will implement when I have more time will be...
 
 1. Allowing users to log in to the site and log out. Meaning that only they can edit, delete and submit their recipes.
 2. Create a rating system that allows for users to rate recipes from 0 to 10.
@@ -20,7 +20,6 @@ Future features which I will implement when I have more time will be ...
 4. Create a comment section allowing for users to suggest improvements/feedback on recipes. 
 5. Have a dropdown which allowed you to filter through if you wanted 'Breakfast', 'Lunch' or 'Dinner'.
 6. Allow for each user to add their own images to their recipes.
-
 
 ## User Stories
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
