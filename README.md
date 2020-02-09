@@ -110,6 +110,8 @@ within smaller screens such as tablets. These are commonly used at universities 
 8. There is an error occuring which I was unable to correct due to time restrictions. This error occures when adding a new recipe to 
 the site. All information is correctly added apart from the Category section. 
 
+9. Checking my console within the developers tool showed that there 4 errors about 'Slow network is detected' this is nothing to be concerned about. 
+
 ## Code Validation
 - Throughout this project I ensured that I was making use of W3C validator for both CSS and HTML. This allowed for me to check my code writing and 
 to check there were no errors.
