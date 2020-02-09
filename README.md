@@ -111,6 +111,9 @@ the site. All information is correctly added apart from the Category section.
 
 9. Checking my console within the developers tool showed that there 4 errors about 'Slow network is detected' this is nothing to be concerned about. 
 
+10. Through my testing on Heroku and Github, i've found that my env.py file is still visible. However when testing and hiding this .py file the deployment on heroku 
+creates and error where the app isn't displayed. 
+
 ## Code Validation
 - Throughout this project I ensured that I was making use of W3C validator for both CSS and HTML. This allowed for me to check my code writing and 
 to check there were no errors.
