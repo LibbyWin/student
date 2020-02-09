@@ -1,1 +1,1 @@
-wev: python student.py
+web: python student.py
