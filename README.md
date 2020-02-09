@@ -7,9 +7,8 @@ delicious meals at a low cost which wont eat into their student loan.
 ## High Level Requirements
 The creation of this website allows for users to ... 
 1. Access up to 3 categories of foods ie. Dinner, Breakfast and Protein Meals.
-2. Display the recipes within time order eg. Breakfast, Lunch/Dinner then Protein Meals for those how want extra help getting in shape.
-3. Allow each recipe to be displayed seperately to have a full screen view, showing the ingredience and instructions.
-4. Allow users to edit, delete and submit new recipes. 
+2. Allow each recipe to be displayed seperately to have a full screen view, showing the ingredience and instructions.
+3. Allow users to edit, delete and submit new recipes. 
 
 ## Future Features
 Future features which I will implement when I have more time will be ...
@@ -18,6 +17,8 @@ Future features which I will implement when I have more time will be ...
 2. Create a rating system that allows for users to rate recipes from 0 to 10.
 3. Create a feedback request form so that the author of a recipe can see how well they are doing. 
 4. Create a commenting section allowing for users to suggest improvements/feedback on recipes. 
+5. Have a dropdown which allowed you to filter through if you wanted 'Breakfast', 'Lunch' or 'Dinner'.
+
 
 ## User Stories
 The invention of this website come straight from a university student who never knew what to cook. I spent the majority of my student 
@@ -30,8 +31,10 @@ student budget. All students can access this site at the university library, mea
 - Home page - This contains the home page image with information on what the site containts. Below this contains all the recipes on the screen. 
 - Add A Recipe - This page contains all the neccessary information for a user to add a new recipe to the site. From Name to price to protein intake.
 - View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
-- Edit Recipe - 
-- Delete Recipe
+- Edit Recipe -  Edit your own or someone elses recipe. The submit button (when clicked) shows a pop up asking if they would like to submit 
+or cancel their edit to make sure they know that they have edited the recipe.
+- Delete Recipe - Completely remove a recipe with this button. However a confirmation pop up will appear to make sure the user knows that they are deleting 
+a recipe.
 
 
 ## Overview Of MongoDB Database
@@ -102,7 +105,8 @@ Due to this error, extra care was taken to ensure that my spelling and use of 's
  designed for library computers at a campus/university. This was taken into consideration while editing the site, and I chose to addapt the site to fit 
 within smaller screens such as tablets. These are commonly used at universities and are handed out during classes occationally. 
 
-
+8. There is an error occuring which I was unable to correct due to time restrictions. This error occures when adding a new recipe to 
+the site. All information is correctly added apart from the Category section. 
 
 ## Code Validation
 - Throughout this project I ensured that I was making use of W3C validator for both CSS and HTML. This allowed for me to check my code writing and 
@@ -110,9 +114,28 @@ to check there were no errors.
 - To check my python code I used pep8 an online tool to validate my python syntax.
 
 ## Deployment
-where is the live site hosted(heroku)
-                                                 =========================EDIT========================
-- 
+
+1. Type in 'heroku ps:scale web=1' into your terminal.
+2. Create a requirements.txt file by entering 'sudo pip3 freeze --local > requirements.txt'.
+3. Go to Heroku.com
+4. Sign in and create a new app
+5. Select your region.
+6. Enter your new app name ie. Student-Life.
+7. Click 'Create App'
+8. Enter 'sudo snap install --clasic heroku' into the CLI.
+9. Enter 'Heroku login --interactive'
+10. Within Heroku, click 'Deploy'.
+11. Within 'create new repositor', copy 'heroku git:remote -a global-Student-Life'.
+12. Paste this into your bash terminal.
+13. Go to the heroku dashboard for your app and click settings.
+14. Copy the heroku git url.
+15. In the bash terminal type 'git remoter add https://studentlife01.herokuapp.com/'.
+16. Enter 'git push -u heroku master'.
+17. On the heroku site, click settings.
+18. Within reveal config vars enter 'IP' in the first box and in the next box enter '0.0.0.0' click add.
+19. Enter 'PORT' in the first box and in the next box enter '5000' click add.
+20. Enter your 'secret key'in the first box and in the next box enter 'default secret key' click add.
+
 
 ## When commiting to Github, follow theres steps...
 1. Ensure you are on the /environment/ in your ternimal.
@@ -128,7 +151,7 @@ where is the live site hosted(heroku)
 ## Acknowledgements
 - Thanks to everyone on the Slack community for helping me with issues that I encountered.
 - Thank you to the Tutors at the Code Institute for their help when I was really struggling.
-- Thanks to Brian Macharia, for the help and support with this project. 
+- Thanks to my Mentor Brian Macharia, for the help and support with this project. 
 
 ## Disclaimer
  This project is for educational use only.
