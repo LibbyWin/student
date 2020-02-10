@@ -41,6 +41,7 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
+    print(request.form)
     ingredients = request.form.get('ingredients').splitlines()
     instructions = request.form.get('instructions').splitlines()
     recipe_insert = {
@@ -109,4 +110,4 @@ def delete_recipe(recipes_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP", "0.0.0.0"),
             port=os.environ.get("PORT", "5000"),
-            debug=True)
+            debug=False)
