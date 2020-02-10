@@ -34,7 +34,7 @@ student budget. All students can access this site at the university library, mea
 - View Recipe - This page allows you to view the entirety of a recipe. At the bottom there are 2 buttons, one for editing and one for deleting. 
 - Edit Recipe -  Edit your own or someone else's recipe. The submit button (when clicked) shows a pop up asking if they would like to submit 
 or cancel their edit to make sure they know that they have edited the recipe.
-- Delete Recipe - Completely remove a recipe with this button. However a confirmation pop up will appear to make sure the user knows that they are deleting 
+- Delete Recipe - Completely remove a recipe with this button. However, a confirmation pop up will appear to make sure the user knows that they are deleting 
 a recipe.
 
 
